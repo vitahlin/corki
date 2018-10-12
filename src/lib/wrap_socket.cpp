@@ -34,3 +34,8 @@ void Listen(int sock_fd, int backlog)
 		LogErrQuit("Listen Error.");
 	}
 }
+
+int Accept(int sock_fd, struct sockaddr * addr, int *)
+{
+
+}
