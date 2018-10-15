@@ -3,7 +3,6 @@
 int main(int argc, char *argv[])
 {
 	int listen_fd = 0;
-	int conn_fd = 0;
 
 	struct sockaddr_in serv_addr;
 
@@ -26,9 +25,13 @@ int main(int argc, char *argv[])
 
 	Listen(listen_fd, LISTENQ);
 
+	char send_line[MAX_LINE] = "Hello client";
+
 	for (;;)
 	{
-
+		int conn_fd = 0;
+		conn_fd = Accept(listen_fd, NULL, NULL);
+		Write(conn_fd, send_line, sizeof(send_line));
 	}
 
 	return 0;
