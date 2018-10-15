@@ -35,7 +35,13 @@ void Listen(int sock_fd, int backlog)
 	}
 }
 
-int Accept(int sock_fd, struct sockaddr * addr, int *)
+int Accept(int sock_fd, struct sockaddr * client_addr, unsigned int * addr_length)
 {
+	int n;
+	if ((n = accept(sock_fd, client_addr, addr_length)) < 0)
+	{
+		LogErrQuit("Accept error");
+	}
 
+	return n;
 }
