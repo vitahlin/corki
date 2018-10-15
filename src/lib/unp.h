@@ -11,6 +11,8 @@
 // write函数所需头文件
 #include<unistd.h>
 
+#include<stdio.h>
+
 #include <iostream>
 using namespace std;
 
@@ -32,4 +34,4 @@ void InetPton(int af, const char *src, void *dst);
 void Connect(int sock_fd, struct sockaddr * serv_addr, int addr_length);
 
 // unix相关函数封装，在wrap_unix.cpp
-int Write(int fd, const void *buff, int count);
+void Write(int fd, const void *buff, int count);
