@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
 		ticks = time(NULL);
 		snprintf(send_line, sizeof(send_line), "%.24s\r\n", ctime(&ticks));
 		Write(conn_fd, send_line, sizeof(send_line));
+		Close(conn_fd);
 	}
 
 	return 0;
