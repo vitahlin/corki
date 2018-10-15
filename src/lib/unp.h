@@ -29,6 +29,7 @@ void Listen(int sock_fd, int backlog);
 void Bind(int sock_fd, const struct sockaddr * addr, int sock_len);
 int Accept(int sock_fd, struct sockaddr * client_addr, unsigned int * addr_length);
 void InetPton(int af, const char *src, void *dst);
+void Connect(int sock_fd, struct sockaddr * serv_addr, int addr_length);
 
 // unix相关函数封装，在wrap_unix.cpp
 int Write(int fd, const void *buff, int count);

@@ -54,3 +54,11 @@ void InetPton(int af, const char *src, void *dst)
 		LogErrQuit("InetPton error");
 	}
 }
+
+void Connect(int sock_fd, struct sockaddr * serv_addr, int addr_length)
+{
+	if (connect(sock_fd, serv_addr, addr_length) < 0)
+	{
+		LogErrQuit("Connect error");
+	}
+}
