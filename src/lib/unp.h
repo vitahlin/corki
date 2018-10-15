@@ -16,16 +16,14 @@
 #include <iostream>
 using namespace std;
 
-
 #define MAX_LINE 4096
-
 #define LISTENQ 1024
 
-// 错误打印函数封装，封装在log_err.cpp文件
-void LogErrQuit(string str);
+// 错误打印函数封装，在log_err.cpp
 void LogErr(string str);
+void LogErrQuit(string str);
 
-// socket相关函数封装，在wrap_socket.cpp文件
+// socket相关函数封装，在wrap_socket.cpp
 int Socket(int domain, int type, int protocol);
 void Listen(int sock_fd, int backlog);
 void Bind(int sock_fd, const struct sockaddr * addr, int sock_len);

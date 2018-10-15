@@ -30,7 +30,6 @@ int main(int argc, char *argv[])
 
 	Listen(listen_fd, LISTENQ);
 
-
 	cout << "Server is running..." << endl;
 	for (;;)
 	{
