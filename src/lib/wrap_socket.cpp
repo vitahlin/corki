@@ -45,3 +45,12 @@ int Accept(int sock_fd, struct sockaddr * client_addr, unsigned int * addr_lengt
 
 	return n;
 }
+
+void InetPton(int af, const char *src, void *dst)
+{
+
+	if (inet_pton(af, src, dst) <= 0)
+	{
+		LogErrQuit("InetPton error");
+	}
+}
