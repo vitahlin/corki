@@ -1,3 +1,11 @@
+/*============================================================================
+* Created       : 2018-10-15 16:57
+* Last modified : 2018-10-15 16:57
+* Filename      : day_time_tcp_cli.cpp
+* Description   :
+*   获取时间客户端程序，原书代码intro/daytimetcpcli.c
+=============================================================================*/
+
 #include "./../lib/unp.h"
 
 int main(int argc, char *argv[])
