@@ -33,3 +33,4 @@ void Connect(int sock_fd, struct sockaddr * serv_addr, int addr_length);
 
 // unix相关函数封装，在wrap_unix.cpp
 void Write(int fd, const void *buff, int count);
+void Close(int fd);

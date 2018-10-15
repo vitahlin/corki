@@ -9,3 +9,11 @@ void Write(int fd, const void *buff, int count)
 		LogErrQuit("Write error");
 	}
 }
+
+void Close(int fd)
+{
+	if (close(fd) == -1)
+	{
+		LogErrQuit("Close error.");
+	}
+}
