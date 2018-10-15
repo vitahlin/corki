@@ -46,6 +46,14 @@ int Accept(int sock_fd, struct sockaddr * client_addr, unsigned int * addr_lengt
 	return n;
 }
 
+void Connect(int sock_fd, struct sockaddr * serv_addr, int addr_length)
+{
+	if (connect(sock_fd, serv_addr, addr_length) < 0)
+	{
+		LogErrQuit("Connect error");
+	}
+}
+
 void InetPton(int af, const char *src, void *dst)
 {
 
@@ -55,10 +63,12 @@ void InetPton(int af, const char *src, void *dst)
 	}
 }
 
-void Connect(int sock_fd, struct sockaddr * serv_addr, int addr_length)
+const char *InetNtop(int family, const void * addr_ptr, char *str_ptr, size_t length)
 {
-	if (connect(sock_fd, serv_addr, addr_length) < 0)
+	const char *ptr;
+	if ( (ptr = inet_ntop(family, addr_ptr, str_ptr, length)) == NULL)
 	{
-		LogErrQuit("Connect error");
+		LogErrQuit("inetNtop error");
 	}
+	return ptr;
 }
