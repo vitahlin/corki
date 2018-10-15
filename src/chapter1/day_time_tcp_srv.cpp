@@ -1,10 +1,15 @@
 #include "./../lib/unp.h"
+#include <time.h>
 
 int main(int argc, char *argv[])
 {
 	int listen_fd = 0;
+	int conn_fd;
 
 	struct sockaddr_in serv_addr;
+	char send_line[MAX_LINE + 1];
+
+	time_t ticks;
 
 	listen_fd = Socket(AF_INET, SOCK_STREAM, 0);
 
@@ -25,12 +30,13 @@ int main(int argc, char *argv[])
 
 	Listen(listen_fd, LISTENQ);
 
-	char send_line[MAX_LINE] = "Hello client";
 
+	cout << "Server is running..." << endl;
 	for (;;)
 	{
-		int conn_fd = 0;
 		conn_fd = Accept(listen_fd, NULL, NULL);
+		ticks = time(NULL);
+		snprintf(send_line, sizeof(send_line), "%.24s\r\n", ctime(&ticks));
 		Write(conn_fd, send_line, sizeof(send_line));
 	}
 
