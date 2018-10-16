@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 
 		InetNtop( AF_INET, &client_addr.sin_addr, client_addr_str, sizeof(client_addr_str));
 		cout << "Client IP: " <<  client_addr_str << endl;
-		//cout << "Client port: " << client_addr.sin_port << endl;
+		cout << "Client port: " << ntohs(client_addr.sin_port) << endl;
 
 		ticks = time(NULL);
 		snprintf(send_line, sizeof(send_line), "%.24s\r\n", ctime(&ticks));
