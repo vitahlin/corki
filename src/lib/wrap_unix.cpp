@@ -17,3 +17,14 @@ void Close(int fd)
 		LogErrQuit("Close error.");
 	}
 }
+
+int Fork()
+{
+	int pid;
+	if ( (pid = fork()) == -1)
+	{
+		LogErrQuit("Fork error.");
+	}
+
+	return pid;
+}

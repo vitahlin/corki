@@ -35,3 +35,4 @@ const char *InetNtop(int family, const void * addr_ptr, char *str_ptr, size_t le
 // unix相关函数封装，在wrap_unix.cpp
 void Write(int fd, const void *buff, int count);
 void Close(int fd);
+int Fork();
