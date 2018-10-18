@@ -1,6 +1,22 @@
 
 #include "./../lib/unp.h"
 
+void StringEcho(int sock_fd)
+{
+	int n;
+	char line[MAX_LINE];
+
+	while ((n = read(sock_fd, line, MAX_LINE)) > 0)
+	{
+		Write(sock_fd, line, n);
+	}
+	if (n < 0)
+	{
+		LogErrQuit("Read error.");
+	}
+
+}
+
 int main(int argv, char *argc[])
 {
 	int conn_fd, listen_fd;
@@ -24,7 +40,7 @@ int main(int argv, char *argc[])
 		if ((pid = Fork()) == 0)
 		{
 			Close(listen_fd);
-
+			StringEcho(conn_fd);
 			Close(conn_fd);
 			exit(0);
 		}
