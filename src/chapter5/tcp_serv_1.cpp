@@ -10,6 +10,7 @@ void StringEcho(int sock_fd)
 	{
 		Write(sock_fd, line, n);
 	}
+	cout << "Receive line: " << line << endl;
 	if (n < 0)
 	{
 		LogErrQuit("Read error.");
@@ -34,6 +35,7 @@ int main(int argv, char *argc[])
 	Bind(listen_fd, (struct sockaddr *)&srv_addr, sizeof(srv_addr));
 	Listen(listen_fd, LISTENQ);
 
+	cout << "Server is running..." << endl;
 	for (;;)
 	{
 		conn_fd = Accept(listen_fd, NULL, NULL);
