@@ -9,42 +9,40 @@
 
 #include <time.h>
 #include "../lib/unp.h"
+#include "./../lib/constant.h"
 
-int main(int argc, char* argv[])
-{
-	int listen_fd, conn_fd;
-	struct sockaddr_in serv_addr;
+int main(int argc, char* argv[]) {
+    int listen_fd, conn_fd;
+    struct sockaddr_in serv_addr;
 
-	char buff[MAX_LINE];
-	time_t ticks;
+    char buff[MAXLINE];
+    time_t ticks;
 
-	listen_fd = socket(AF_INET, SOCK_STREAM, 0);
+    listen_fd = socket(AF_INET, SOCK_STREAM, 0);
 
-	bzero(&serv_addr, sizeof(serv_addr));
+    bzero(&serv_addr, sizeof(serv_addr));
 
-	serv_addr.sin_family = AF_INET;
+    serv_addr.sin_family = AF_INET;
 
-	serv_addr.sin_addr.s_addr = htons(INADDR_ANY);
-	serv_addr.sin_port = htons(9876);
+    serv_addr.sin_addr.s_addr = htons(INADDR_ANY);
+    serv_addr.sin_port = htons(9876);
 
-	Bind(listen_fd, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
-	Listen(listen_fd, LISTENQ);
+    Bind(listen_fd, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
+    Listen(listen_fd, LISTENQ);
 
-	cout << "Server is running..." << endl;
-	for (;;)
-	{
-		conn_fd = Accept(listen_fd, (struct sockaddr*)NULL, NULL);
+    cout << "Server is running..." << endl;
+    for (;;) {
+        conn_fd = Accept(listen_fd, (struct sockaddr*)NULL, NULL);
 
-		ticks = time(NULL);
-		snprintf(buff, sizeof(buff), "%.24s\r\n", ctime(&ticks));
+        ticks = time(NULL);
+        snprintf(buff, sizeof(buff), "%.24s\r\n", ctime(&ticks));
 
-		for (int i = 0; i < strlen(buff); i++)
-		{
-			Write(conn_fd, buff + i, 1);
-		}
+        for (int i = 0; i < strlen(buff); i++) {
+            Write(conn_fd, buff + i, 1);
+        }
 
-		Close(conn_fd);
-	}
+        Close(conn_fd);
+    }
 
-	return 0;
+    return 0;
 }
