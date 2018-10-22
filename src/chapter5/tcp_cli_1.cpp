@@ -1,30 +1,21 @@
 
 #include "./../lib/unp.h"
 
-void StringCli(FILE *fp, int sock_fd)
+void StringCli(FILE *fp, int sockfd)
 {
-	int n;
-	char send_line[MAX_LINE];
-	char receive_line[MAX_LINE];
+	char    sendline[MAXLINE], recvline[MAXLINE];
 
-	while (cin >> send_line)
+	while (Fgets(sendline, MAXLINE, fp) != NULL)
 	{
-		cout << "Input: " << send_line << endl;
-		Write(sock_fd, send_line, MAX_LINE);
 
-		while ((n = read(sock_fd, receive_line, MAX_LINE)) > 0)
-		{
-			receive_line[n] = 0;
-			if (fputs(receive_line, stdout) == EOF)
-			{
-				LogErr("Fputs error");
+		Writen(sockfd, sendline, strlen(sendline));
 
-			}
-		}
-		if (n < 0)
+		if (Readline(sockfd, recvline, MAXLINE) == 0)
 		{
-			LogErrQuit("Read error");
+			LogErrQuit(""str_cli: server terminated prematurely");
 		}
+
+		Fputs(recvline, stdout);
 	}
 }
 
@@ -32,8 +23,8 @@ int main(int argc, char *argv[])
 {
 	int n;
 	int sock_fd;
-	char send_str[MAX_LINE];
-	char receive_str[MAX_LINE];
+	char send_str[MAXLINE];
+	char receive_str[MAXLINE];
 	struct sockaddr_in sock_addr;
 
 	if (argc != 2)
