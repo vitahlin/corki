@@ -24,7 +24,7 @@ void LogErrQuit(string str);
 // socket相关函数封装，在wrap_socket.cpp
 int Socket(int domain, int type, int protocol);
 void Listen(int sock_fd, int backlog);
-void Bind(int sock_fd, const struct sockaddr *addr, int sock_len);
+void Bind(int sock_fd, const struct sockaddr *addr, unsigned int sock_len);
 int Accept(int sock_fd,
            struct sockaddr *client_addr,
            unsigned int *addr_length);
