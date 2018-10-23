@@ -9,7 +9,7 @@ int Socket(int domain, int type, int protocol) {
     return n;
 }
 
-void Bind(int sock_fd, const struct sockaddr *addr, int sock_len) {
+void Bind(int sock_fd, const struct sockaddr *addr, unsigned int sock_len) {
     if (bind(sock_fd, addr, sock_len) < 0) {
         LogErrQuit("Bind error.");
     }
@@ -39,7 +39,7 @@ int Accept(int sock_fd,
     return n;
 }
 
-void Connect(int sock_fd, struct sockaddr *serv_addr, int addr_length) {
+void Connect(int sock_fd, struct sockaddr *serv_addr, socklen_t addr_length) {
     if (connect(sock_fd, serv_addr, addr_length) < 0) {
         LogErrQuit("Connect error");
     }
