@@ -39,3 +39,6 @@ const char *InetNtop(int family,
 void Write(int fd, const void *buff, int count);
 void Close(int fd);
 int Fork();
+
+int writen(int fd, const void *ptr, int n);
+void Writen(int fd, void *ptr, int nbytes);
