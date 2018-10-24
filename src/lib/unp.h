@@ -17,6 +17,8 @@
 
 using namespace std;
 
+#define socklen_t unsigned int
+
 // 错误打印函数封装，在log_err.cpp
 void LogErr(string str);
 void LogErrQuit(string str);
@@ -24,11 +26,9 @@ void LogErrQuit(string str);
 // socket相关函数封装，在wrap_socket.cpp
 int Socket(int domain, int type, int protocol);
 void Listen(int sock_fd, int backlog);
-void Bind(int sock_fd, const struct sockaddr *addr, unsigned int sock_len);
-int Accept(int sock_fd,
-           struct sockaddr *client_addr,
-           unsigned int *addr_length);
-void Connect(int sock_fd, struct sockaddr *serv_addr, int addr_length);
+void Bind(int sock_fd, const struct sockaddr *addr, socklen_t sock_len);
+int Accept(int sock_fd, struct sockaddr *client_addr, socklen_t *addr_length);
+void Connect(int sock_fd, struct sockaddr *serv_addr, socklen_t addr_length);
 void InetPton(int af, const char *src, void *dst);
 const char *InetNtop(int family,
                      const void *addr_ptr,

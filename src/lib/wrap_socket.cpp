@@ -9,7 +9,7 @@ int Socket(int domain, int type, int protocol) {
     return n;
 }
 
-void Bind(int sock_fd, const struct sockaddr *addr, unsigned int sock_len) {
+void Bind(int sock_fd, const struct sockaddr *addr, socklen_t sock_len) {
     if (bind(sock_fd, addr, sock_len) < 0) {
         LogErrQuit("Bind error.");
     }
@@ -28,9 +28,7 @@ void Listen(int sock_fd, int backlog) {
     }
 }
 
-int Accept(int sock_fd,
-           struct sockaddr *client_addr,
-           unsigned int *addr_length) {
+int Accept(int sock_fd, struct sockaddr *client_addr, socklen_t *addr_length) {
     int n;
     if ((n = accept(sock_fd, client_addr, addr_length)) < 0) {
         LogErrQuit("Accept error");
