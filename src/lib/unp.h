@@ -42,3 +42,6 @@ int Fork();
 
 int writen(int fd, const void *ptr, int n);
 void Writen(int fd, void *ptr, int nbytes);
+
+int readline(int fd, void *vptr, int maxlen);
+int Readline(int fd, void *ptr, int maxlen);
