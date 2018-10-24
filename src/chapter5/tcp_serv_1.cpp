@@ -3,6 +3,15 @@
 #include "./../lib/unp.h"
 
 void StringEcho(int sock_fd) {
+    int n;
+    char line[MAXLINE];
+
+    for (;;) {
+        if ((n = Readline(sock_fd, line, MAXLINE)) == 0) {
+            return;
+        }
+        Writen(sock_fd, line, n);
+    }
 }
 
 int main(int argv, char *argc[]) {
