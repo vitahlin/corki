@@ -13,7 +13,8 @@ void StringCli(FILE *fp, int sock_fd) {
             LogErrQuit("StringCli: Server terminated prematurely");
         }
 
-        Fputs(receive_line, stdout);
+        // Fputs(receive_line, stdout);
+        cout << "Received from server: " << receive_line;
     }
 }
 

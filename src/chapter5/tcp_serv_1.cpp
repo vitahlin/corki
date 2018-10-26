@@ -10,6 +10,7 @@ void StringEcho(int sock_fd) {
         if ((n = Readline(sock_fd, line, MAXLINE)) == 0) {
             return;
         }
+        cout << "Received from client: " << line;
         Writen(sock_fd, line, n);
     }
 }
