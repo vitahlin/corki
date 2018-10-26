@@ -2,7 +2,19 @@
 #include "./../lib/constant.h"
 #include "./../lib/unp.h"
 
-void StringCli(FILE *fp, int sockfd) {
+void StringCli(FILE *fp, int sock_fd) {
+    char send_line[MAXLINE];
+    char receive_line[MAXLINE];
+
+    while (Fgets(send_line, MAXLINE, fp) != NULL) {
+        Writen(sock_fd, send_line, strlen(send_line));
+
+        if (Readline(sock_fd, receive_line, MAXLINE) == 0) {
+            LogErrQuit("StringCli: Server terminated prematurely");
+        }
+
+        Fputs(receive_line, stdout);
+    }
 }
 
 int main(int argc, char *argv[]) {
