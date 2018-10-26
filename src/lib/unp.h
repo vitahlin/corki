@@ -45,3 +45,7 @@ void Writen(int fd, void *ptr, int nbytes);
 
 int readline(int fd, void *vptr, int maxlen);
 int Readline(int fd, void *ptr, int maxlen);
+
+// C输出输出相关函数封装，在wrap_stdio.cpp
+char *Fgets(char *ptr, int n, FILE *stream);
+void Fputs(const char *ptr, FILE *stream);
