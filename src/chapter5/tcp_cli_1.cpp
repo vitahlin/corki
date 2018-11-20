@@ -38,6 +38,7 @@ int main(int argc, char *argv[]) {
 
     Connect(sock_fd, (struct sockaddr *)&sock_addr, sizeof(sock_addr));
 
+    cout << "Client is running..." << endl;
     StringCli(stdin, sock_fd);
 
     return 0;
