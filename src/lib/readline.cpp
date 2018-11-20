@@ -1,6 +1,9 @@
 #include "./constant.h"
 #include "./unp.h"
 
+// 一次性读取MAXLINE个字符，存在static变量中，每次调用该函数返回一个字符
+// 当字符全部返回完，即read_cnt=0的时候，在重新read一次，相对于旧版本的
+// 代码，减少了I/O操作
 static int my_read(int fd, char *ptr) {
     static int read_cnt = 0;
     static char *read_ptr;
