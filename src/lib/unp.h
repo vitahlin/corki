@@ -43,9 +43,11 @@ void Write(int fd, const void *buff, int count);
 void Close(int fd);
 int Fork();
 
+// 写函数封装
 int writen(int fd, const void *ptr, int n);
 void Writen(int fd, void *ptr, int nbytes);
 
+// 读函数封装
 int readline(int fd, void *vptr, int maxlen);
 int Readline(int fd, void *ptr, int maxlen);
 
