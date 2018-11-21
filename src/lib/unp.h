@@ -15,15 +15,18 @@
 
 #include <iostream>
 
-using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::string;
 
 #define socklen_t unsigned int
 
-// 错误打印函数封装，在log_err.cpp
+// 错误打印函数封装，在log_err.cc
 void LogErr(string str);
 void LogErrQuit(string str);
 
-// socket相关函数封装，在wrap_socket.cpp
+// socket相关函数封装，在wrap_socket.cc
 int Socket(int domain, int type, int protocol);
 void Listen(int sock_fd, int backlog);
 void Bind(int sock_fd, const struct sockaddr *addr, socklen_t sock_len);
@@ -35,7 +38,7 @@ const char *InetNtop(int family,
                      char *str_ptr,
                      size_t length);
 
-// unix相关函数封装，在wrap_unix.cpp
+// unix相关函数封装，在wrap_unix.cc
 void Write(int fd, const void *buff, int count);
 void Close(int fd);
 int Fork();
@@ -46,6 +49,6 @@ void Writen(int fd, void *ptr, int nbytes);
 int readline(int fd, void *vptr, int maxlen);
 int Readline(int fd, void *ptr, int maxlen);
 
-// C输出输出相关函数封装，在wrap_stdio.cpp
+// C输出输出相关函数封装，在wrap_stdio.cc
 char *Fgets(char *ptr, int n, FILE *stream);
 void Fputs(const char *ptr, FILE *stream);

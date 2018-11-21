@@ -6,6 +6,6 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../lib unp.out)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../)
 
-add_executable(exercise_1_5_srv exercise_1_5_srv.cpp)
+add_executable(exercise_1_5_srv exercise_1_5_srv.cc)
 
 target_link_libraries(exercise_1_5_srv unpLib)

@@ -1,7 +1,7 @@
 /*============================================================================
 * Created       : 2018-10-15 16:55
 * Last modified : 2018-10-15 16:55
-* Filename      : day_time_tcp_srv.cpp
+* Filename      : day_time_tcp_srv.cc
 * Description   :
 *   获取时间服务器程序，原书代码intro/daytimetcpsrv.c
 *
