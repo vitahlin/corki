@@ -2,7 +2,7 @@
 #include "./../lib/constant.h"
 #include "./../lib/unp.h"
 
-void StringEcho(int sock_fd) {
+void StrEcho(int sock_fd) {
     int n;
     char line[MAXLINE];
 
@@ -36,7 +36,7 @@ int main(int argv, char *argc[]) {
         conn_fd = Accept(listen_fd, NULL, NULL);
         if ((pid = Fork()) == 0) {
             Close(listen_fd);
-            StringEcho(conn_fd);
+            StrEcho(conn_fd);
             Close(conn_fd);
             exit(0);
         }
