@@ -2,7 +2,7 @@
 #include "./../lib/constant.h"
 #include "./../lib/unp.h"
 
-void StringCli(FILE *fp, int sock_fd) {
+void StrCli(FILE *fp, int sock_fd) {
     char send_line[MAXLINE];
     char receive_line[MAXLINE];
 
@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
     }
 
     cout << "Client is running..." << endl;
-    StringCli(stdin, sock_fd[0]);
+    StrCli(stdin, sock_fd[0]);
 
     return 0;
 }
