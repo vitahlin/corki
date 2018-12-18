@@ -10,7 +10,7 @@ void StrCli(FILE *fp, int sock_fd) {
         Writen(sock_fd, send_line, strlen(send_line));
 
         if (Readline(sock_fd, receive_line, MAXLINE) == 0) {
-            LogErrQuit("StringCli: Server terminated prematurely");
+            LogErrQuit("StrCli: Server terminated prematurely");
         }
 
         // Fputs(receive_line, stdout);
