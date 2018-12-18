@@ -66,8 +66,7 @@ int main(int argv, char *argc[]) {
         if ((child_pid = Fork()) == 0) {
             Close(listen_fd);
             StringEcho(conn_fd);
-
-            // Close(conn_fd);
+            Close(conn_fd);
             exit(0);
         }
         Close(conn_fd);
