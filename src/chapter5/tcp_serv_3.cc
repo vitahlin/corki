@@ -7,8 +7,8 @@
 
 typedef void SignalFunc(int);
 
-SignalFunc *Signal(int signo, SignalFunc *func) {
-    SignalFunc *sig_func;
+SignalFunc* Signal(int signo, SignalFunc* func) {
+    SignalFunc* sig_func;
     if ((sig_func = signal(signo, func)) == SIG_ERR) {
         LogErr("Signal error");
     }
@@ -39,7 +39,7 @@ void StrEcho(int sock_fd) {
     }
 }
 
-int main(int argv, char *argc[]) {
+int main(int argv, char* argc[]) {
     int conn_fd, listen_fd;
     struct sockaddr_in srv_addr;
 
@@ -54,7 +54,7 @@ int main(int argv, char *argc[]) {
     srv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
     srv_addr.sin_port = htons(9876);
 
-    Bind(listen_fd, (struct sockaddr *)&srv_addr, sizeof(srv_addr));
+    Bind(listen_fd, (struct sockaddr*)&srv_addr, sizeof(srv_addr));
     Listen(listen_fd, LISTENQ);
 
     Signal(SIGCHLD, SigChildWait);
@@ -62,7 +62,7 @@ int main(int argv, char *argc[]) {
     cout << "Server is running..." << endl;
     for (;;) {
         cli_len = sizeof(cli_addr);
-        conn_fd = Accept(listen_fd, (struct sockaddr *)&cli_addr, &cli_len);
+        conn_fd = Accept(listen_fd, (struct sockaddr*)&cli_addr, &cli_len);
         if ((child_pid = Fork()) == 0) {
             Close(listen_fd);
             StrEcho(conn_fd);
