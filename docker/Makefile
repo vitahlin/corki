@@ -1,4 +1,4 @@
-.PHONY: build up start stop down status bash
+.PHONY: build up start stop down status centos
 
 build:
 	docker-compose build
@@ -18,5 +18,5 @@ down:
 status:
 	docker-compose ps
 
-bash:
+centos:
 	docker-compose exec centos /bin/bash

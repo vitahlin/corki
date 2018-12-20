@@ -10,8 +10,6 @@ services:
   centos:
     build:
       context: ./centos
-    ports:
-      - "4873:4873"
     volumes:
       - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
     tty: true
