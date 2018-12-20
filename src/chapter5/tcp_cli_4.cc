@@ -2,7 +2,7 @@
 #include "./../lib/constant.h"
 #include "./../lib/unp.h"
 
-void StrCli(FILE *fp, int sock_fd) {
+void StrCli(FILE* fp, int sock_fd) {
     char send_line[MAXLINE];
     char receive_line[MAXLINE];
 
@@ -17,7 +17,7 @@ void StrCli(FILE *fp, int sock_fd) {
     }
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
     int n;
     int sock_fd[5];
     char send_str[MAXLINE];
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
         sock_addr.sin_port = htons(9876);
         InetPton(AF_INET, argv[1], &sock_addr.sin_addr);
 
-        Connect(sock_fd[i], (struct sockaddr *)&sock_addr, sizeof(sock_addr));
+        Connect(sock_fd[i], (struct sockaddr*)&sock_addr, sizeof(sock_addr));
     }
 
     cout << "Client is running..." << endl;

@@ -9,7 +9,7 @@
 #include "./../lib/constant.h"
 #include "./../lib/unp.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
     int n;
     int sock_fd;
     char receive_line[MAXLINE + 1];
@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
     // 将要连接的服务器IP地址进行转换，并赋值
     InetPton(AF_INET, argv[1], &sock_addr.sin_addr);
 
-    Connect(sock_fd, (struct sockaddr *)&sock_addr, sizeof(sock_addr));
+    Connect(sock_fd, (struct sockaddr*)&sock_addr, sizeof(sock_addr));
 
     while ((n = read(sock_fd, receive_line, MAXLINE)) > 0) {
         receive_line[n] = 0;

@@ -11,7 +11,7 @@
 #include "./../lib/constant.h"
 #include "./../lib/unp.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
     int listen_fd = 0;
     int conn_fd;
 
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
     serv_addr.sin_port = htons(9876);
 
     // 对套接字进行地址和端口绑定
-    Bind(listen_fd, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
+    Bind(listen_fd, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
 
     Listen(listen_fd, LISTENQ);
 

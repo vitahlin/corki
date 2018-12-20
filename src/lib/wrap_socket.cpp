@@ -9,14 +9,14 @@ int Socket(int domain, int type, int protocol) {
     return n;
 }
 
-void Bind(int sock_fd, const struct sockaddr *addr, socklen_t sock_len) {
+void Bind(int sock_fd, const struct sockaddr* addr, socklen_t sock_len) {
     if (bind(sock_fd, addr, sock_len) < 0) {
         LogErrQuit("Bind error.");
     }
 }
 
 void Listen(int sock_fd, int backlog) {
-    char *ptr;
+    char* ptr;
 
     // 允许管理员自己设置backlog的值，atoi函数将字符串转为整型值
     if ((ptr = getenv("LISTENQ")) != NULL) {
@@ -28,7 +28,7 @@ void Listen(int sock_fd, int backlog) {
     }
 }
 
-int Accept(int sock_fd, struct sockaddr *client_addr, socklen_t *addr_length) {
+int Accept(int sock_fd, struct sockaddr* client_addr, socklen_t* addr_length) {
     int n;
     if ((n = accept(sock_fd, client_addr, addr_length)) < 0) {
         LogErrQuit("Accept error");
@@ -37,23 +37,23 @@ int Accept(int sock_fd, struct sockaddr *client_addr, socklen_t *addr_length) {
     return n;
 }
 
-void Connect(int sock_fd, struct sockaddr *serv_addr, socklen_t addr_length) {
+void Connect(int sock_fd, struct sockaddr* serv_addr, socklen_t addr_length) {
     if (connect(sock_fd, serv_addr, addr_length) < 0) {
         LogErrQuit("Connect error");
     }
 }
 
-void InetPton(int af, const char *src, void *dst) {
+void InetPton(int af, const char* src, void* dst) {
     if (inet_pton(af, src, dst) <= 0) {
         LogErrQuit("InetPton error");
     }
 }
 
-const char *InetNtop(int family,
-                     const void *addr_ptr,
-                     char *str_ptr,
+const char* InetNtop(int family,
+                     const void* addr_ptr,
+                     char* str_ptr,
                      size_t length) {
-    const char *ptr;
+    const char* ptr;
     if ((ptr = inet_ntop(family, addr_ptr, str_ptr, length)) == NULL) {
         LogErrQuit("inetNtop error");
     }

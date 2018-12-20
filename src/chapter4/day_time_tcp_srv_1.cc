@@ -11,7 +11,7 @@
 #include "./../lib/constant.h"
 #include "./../lib/unp.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
     int listen_fd = 0;
     int conn_fd;
 
@@ -41,20 +41,17 @@ int main(int argc, char *argv[]) {
     serv_addr.sin_port = htons(9876);
 
     // 对套接字进行地址和端口绑定
-    Bind(listen_fd, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
+    Bind(listen_fd, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
 
     Listen(listen_fd, LISTENQ);
 
     cout << "Server is running..." << endl;
     for (;;) {
         client_addr_length = sizeof(client_addr);
-        conn_fd = Accept(listen_fd,
-                         (struct sockaddr *)&client_addr,
-                         (unsigned int *)&client_addr_length);
+        conn_fd = Accept(listen_fd, (struct sockaddr*)&client_addr,
+                         (unsigned int*)&client_addr_length);
 
-        InetNtop(AF_INET,
-                 &client_addr.sin_addr,
-                 client_addr_str,
+        InetNtop(AF_INET, &client_addr.sin_addr, client_addr_str,
                  sizeof(client_addr_str));
         cout << "Client IP: " << client_addr_str << endl;
         cout << "Client port: " << ntohs(client_addr.sin_port) << endl;
