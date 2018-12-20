@@ -11,7 +11,11 @@
 // write函数所需头文件
 #include <unistd.h>
 
+#include <errno.h>
+
 #include <stdio.h>
+#include <string.h>
+#include <cstdlib>
 
 #include <iostream>
 
@@ -21,6 +25,10 @@ using std::endl;
 using std::string;
 
 #define socklen_t unsigned int
+
+#ifndef HAVE_BZERO
+#define bzero(ptr, n) memset(ptr, 0, n)
+#endif
 
 // 错误打印函数封装，在log_err.cc
 void LogErr(string str);
