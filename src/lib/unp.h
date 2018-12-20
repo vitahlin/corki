@@ -17,6 +17,8 @@
 #include <string.h>
 #include <cstdlib>
 
+#include <sys/wait.h>
+
 #include <iostream>
 
 using std::cin;
