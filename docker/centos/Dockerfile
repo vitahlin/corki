@@ -11,5 +11,5 @@ RUN yum -y install make && \
     gmake install 
 
 
-RUN mkdir /vitah
-WORKDIR /vitah/
+RUN mkdir /corki
+WORKDIR /corki/
