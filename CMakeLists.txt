@@ -1,10 +1,8 @@
 cmake_minimum_required(VERSION 3.19)
-project(c C)
+project(corki)
 set(CMAKE_C_STANDARD 11)
 
 # apue
-#add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/apue/lib apue.out)
-
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./apue/chapter10)
 add_executable(catch_sigusr apue/chapter10/catch_sigusr.c)
 
