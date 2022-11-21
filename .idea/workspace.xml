@@ -39,49 +39,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4935d0d9-e691-40b8-b39e-9709a49b195e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/query/cache-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/cache-v2-3035a85cc2ec9d1aa695.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/cmakeFiles-v1-0968ad4499b5fac82250.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/codemodel-v2-346b10ee791f72e7b660.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/directory-.-f5ebdc15457944623624.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/directory-unp.lib.lib.out-5e4a68ba35d007b26ed4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/index-2022-11-21T14-05-56-0054.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-catch_sigusr-87a8f4a067152895a805.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-echo_time_fork_tcp_srv-07e19a439f2efc8be360.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-echo_time_tcp_srv-c15b4643d85f62d3185b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-get_time_tcp_cli-db1d71149c3acb833f94.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-get_timestamp-c01a7e52706d14b2003a.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-tcp_cli_01-486af20ea8e8510ac588.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-tcp_cli_02-aca77be0fc4dc8a41798.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-tcp_cli_03-70e836346c80eb9e478f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-tcp_cli_select_01-1afa10c671d76f25809c.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-tcp_cli_select_02-699f4fb6639cd0ec8628.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-tcp_srv_01-0073f130676b6ed1a4bd.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-tcp_srv_02-ba8a920082890dba6530.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-tcp_srv_03-34717ca9ba6d3ea58a4d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-tcp_srv_04-c077c587052d7de9dcbc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-tcp_srv_select_01-9be3fbe84712d3b98a9a.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-unpLib-d8164d9135daf5450832.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-use_connect-d41022b1a49b2a767199.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-use_fork-ccd793318abf7e704861.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/target-use_inet_pton-dba1b0c3773f98c65a4b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.cmake/api/v1/reply/toolchains-v1-690b0266afb2b0a3379c.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/corki.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.ninja_deps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.ninja_log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.ninja" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unp/chapter01/get_time_tcp_cli" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +214,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669038402152</updated>
-      <workItem from="1669038403617" duration="1191000" />
+      <workItem from="1669038403617" duration="1287000" />
     </task>
     <servers />
   </component>
