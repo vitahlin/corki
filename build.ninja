@@ -1,0 +1,799 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: corki
+# Configurations: 
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/vitah/Downloads/dev/corki/
+# =============================================================================
+# Object build statements for EXECUTABLE target catch_sigusr
+
+
+#############################################
+# Order-only phony target for catch_sigusr
+
+build cmake_object_order_depends_target_catch_sigusr: phony || CMakeFiles/catch_sigusr.dir
+
+build CMakeFiles/catch_sigusr.dir/apue/chapter10/catch_sigusr.c.o: C_COMPILER__catch_sigusr_ /Users/vitah/Downloads/dev/corki/apue/chapter10/catch_sigusr.c || cmake_object_order_depends_target_catch_sigusr
+  DEP_FILE = CMakeFiles/catch_sigusr.dir/apue/chapter10/catch_sigusr.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/catch_sigusr.dir
+  OBJECT_FILE_DIR = CMakeFiles/catch_sigusr.dir/apue/chapter10
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target catch_sigusr
+
+
+#############################################
+# Link the executable apue/chapter10/catch_sigusr
+
+build apue/chapter10/catch_sigusr: C_EXECUTABLE_LINKER__catch_sigusr_ CMakeFiles/catch_sigusr.dir/apue/chapter10/catch_sigusr.c.o
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  OBJECT_DIR = CMakeFiles/catch_sigusr.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter10/catch_sigusr
+  TARGET_PDB = catch_sigusr.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target get_timestamp
+
+
+#############################################
+# Order-only phony target for get_timestamp
+
+build cmake_object_order_depends_target_get_timestamp: phony || CMakeFiles/get_timestamp.dir
+
+build CMakeFiles/get_timestamp.dir/other/get_timestamp.c.o: C_COMPILER__get_timestamp_ /Users/vitah/Downloads/dev/corki/other/get_timestamp.c || cmake_object_order_depends_target_get_timestamp
+  DEP_FILE = CMakeFiles/get_timestamp.dir/other/get_timestamp.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/get_timestamp.dir
+  OBJECT_FILE_DIR = CMakeFiles/get_timestamp.dir/other
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target get_timestamp
+
+
+#############################################
+# Link the executable other/get_timestamp
+
+build other/get_timestamp: C_EXECUTABLE_LINKER__get_timestamp_ CMakeFiles/get_timestamp.dir/other/get_timestamp.c.o
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  OBJECT_DIR = CMakeFiles/get_timestamp.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = other/get_timestamp
+  TARGET_PDB = get_timestamp.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target use_fork
+
+
+#############################################
+# Order-only phony target for use_fork
+
+build cmake_object_order_depends_target_use_fork: phony || CMakeFiles/use_fork.dir
+
+build CMakeFiles/use_fork.dir/other/use_fork.c.o: C_COMPILER__use_fork_ /Users/vitah/Downloads/dev/corki/other/use_fork.c || cmake_object_order_depends_target_use_fork
+  DEP_FILE = CMakeFiles/use_fork.dir/other/use_fork.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/use_fork.dir
+  OBJECT_FILE_DIR = CMakeFiles/use_fork.dir/other
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target use_fork
+
+
+#############################################
+# Link the executable other/use_fork
+
+build other/use_fork: C_EXECUTABLE_LINKER__use_fork_ CMakeFiles/use_fork.dir/other/use_fork.c.o
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  OBJECT_DIR = CMakeFiles/use_fork.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = other/use_fork
+  TARGET_PDB = use_fork.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target echo_time_tcp_srv
+
+
+#############################################
+# Order-only phony target for echo_time_tcp_srv
+
+build cmake_object_order_depends_target_echo_time_tcp_srv: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/echo_time_tcp_srv.dir/unp/chapter01/echo_time_tcp_srv.c.o: C_COMPILER__echo_time_tcp_srv_ /Users/vitah/Downloads/dev/corki/unp/chapter01/echo_time_tcp_srv.c || cmake_object_order_depends_target_echo_time_tcp_srv
+  DEP_FILE = CMakeFiles/echo_time_tcp_srv.dir/unp/chapter01/echo_time_tcp_srv.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/echo_time_tcp_srv.dir
+  OBJECT_FILE_DIR = CMakeFiles/echo_time_tcp_srv.dir/unp/chapter01
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target echo_time_tcp_srv
+
+
+#############################################
+# Link the executable unp/chapter01/echo_time_tcp_srv
+
+build unp/chapter01/echo_time_tcp_srv: C_EXECUTABLE_LINKER__echo_time_tcp_srv_ CMakeFiles/echo_time_tcp_srv.dir/unp/chapter01/echo_time_tcp_srv.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/echo_time_tcp_srv.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter01/echo_time_tcp_srv
+  TARGET_PDB = echo_time_tcp_srv.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target get_time_tcp_cli
+
+
+#############################################
+# Order-only phony target for get_time_tcp_cli
+
+build cmake_object_order_depends_target_get_time_tcp_cli: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/get_time_tcp_cli.dir/unp/chapter01/get_time_tcp_cli.c.o: C_COMPILER__get_time_tcp_cli_ /Users/vitah/Downloads/dev/corki/unp/chapter01/get_time_tcp_cli.c || cmake_object_order_depends_target_get_time_tcp_cli
+  DEP_FILE = CMakeFiles/get_time_tcp_cli.dir/unp/chapter01/get_time_tcp_cli.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/get_time_tcp_cli.dir
+  OBJECT_FILE_DIR = CMakeFiles/get_time_tcp_cli.dir/unp/chapter01
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target get_time_tcp_cli
+
+
+#############################################
+# Link the executable unp/chapter01/get_time_tcp_cli
+
+build unp/chapter01/get_time_tcp_cli: C_EXECUTABLE_LINKER__get_time_tcp_cli_ CMakeFiles/get_time_tcp_cli.dir/unp/chapter01/get_time_tcp_cli.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/get_time_tcp_cli.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter01/get_time_tcp_cli
+  TARGET_PDB = get_time_tcp_cli.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target echo_time_fork_tcp_srv
+
+
+#############################################
+# Order-only phony target for echo_time_fork_tcp_srv
+
+build cmake_object_order_depends_target_echo_time_fork_tcp_srv: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/echo_time_fork_tcp_srv.dir/unp/chapter04/echo_time_fork_tcp_srv.c.o: C_COMPILER__echo_time_fork_tcp_srv_ /Users/vitah/Downloads/dev/corki/unp/chapter04/echo_time_fork_tcp_srv.c || cmake_object_order_depends_target_echo_time_fork_tcp_srv
+  DEP_FILE = CMakeFiles/echo_time_fork_tcp_srv.dir/unp/chapter04/echo_time_fork_tcp_srv.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/echo_time_fork_tcp_srv.dir
+  OBJECT_FILE_DIR = CMakeFiles/echo_time_fork_tcp_srv.dir/unp/chapter04
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target echo_time_fork_tcp_srv
+
+
+#############################################
+# Link the executable unp/chapter04/echo_time_fork_tcp_srv
+
+build unp/chapter04/echo_time_fork_tcp_srv: C_EXECUTABLE_LINKER__echo_time_fork_tcp_srv_ CMakeFiles/echo_time_fork_tcp_srv.dir/unp/chapter04/echo_time_fork_tcp_srv.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/echo_time_fork_tcp_srv.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter04/echo_time_fork_tcp_srv
+  TARGET_PDB = echo_time_fork_tcp_srv.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target use_connect
+
+
+#############################################
+# Order-only phony target for use_connect
+
+build cmake_object_order_depends_target_use_connect: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/use_connect.dir/unp/chapter04/use_connect.c.o: C_COMPILER__use_connect_ /Users/vitah/Downloads/dev/corki/unp/chapter04/use_connect.c || cmake_object_order_depends_target_use_connect
+  DEP_FILE = CMakeFiles/use_connect.dir/unp/chapter04/use_connect.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/use_connect.dir
+  OBJECT_FILE_DIR = CMakeFiles/use_connect.dir/unp/chapter04
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target use_connect
+
+
+#############################################
+# Link the executable unp/chapter04/use_connect
+
+build unp/chapter04/use_connect: C_EXECUTABLE_LINKER__use_connect_ CMakeFiles/use_connect.dir/unp/chapter04/use_connect.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/use_connect.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter04/use_connect
+  TARGET_PDB = use_connect.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target use_inet_pton
+
+
+#############################################
+# Order-only phony target for use_inet_pton
+
+build cmake_object_order_depends_target_use_inet_pton: phony || CMakeFiles/use_inet_pton.dir
+
+build CMakeFiles/use_inet_pton.dir/unp/chapter04/use_inet_pton.c.o: C_COMPILER__use_inet_pton_ /Users/vitah/Downloads/dev/corki/unp/chapter04/use_inet_pton.c || cmake_object_order_depends_target_use_inet_pton
+  DEP_FILE = CMakeFiles/use_inet_pton.dir/unp/chapter04/use_inet_pton.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/use_inet_pton.dir
+  OBJECT_FILE_DIR = CMakeFiles/use_inet_pton.dir/unp/chapter04
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target use_inet_pton
+
+
+#############################################
+# Link the executable unp/chapter04/use_inet_pton
+
+build unp/chapter04/use_inet_pton: C_EXECUTABLE_LINKER__use_inet_pton_ CMakeFiles/use_inet_pton.dir/unp/chapter04/use_inet_pton.c.o
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  OBJECT_DIR = CMakeFiles/use_inet_pton.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter04/use_inet_pton
+  TARGET_PDB = use_inet_pton.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tcp_cli_01
+
+
+#############################################
+# Order-only phony target for tcp_cli_01
+
+build cmake_object_order_depends_target_tcp_cli_01: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/tcp_cli_01.dir/unp/chapter05/tcp_cli_01.c.o: C_COMPILER__tcp_cli_01_ /Users/vitah/Downloads/dev/corki/unp/chapter05/tcp_cli_01.c || cmake_object_order_depends_target_tcp_cli_01
+  DEP_FILE = CMakeFiles/tcp_cli_01.dir/unp/chapter05/tcp_cli_01.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/tcp_cli_01.dir
+  OBJECT_FILE_DIR = CMakeFiles/tcp_cli_01.dir/unp/chapter05
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tcp_cli_01
+
+
+#############################################
+# Link the executable unp/chapter05/tcp_cli_01
+
+build unp/chapter05/tcp_cli_01: C_EXECUTABLE_LINKER__tcp_cli_01_ CMakeFiles/tcp_cli_01.dir/unp/chapter05/tcp_cli_01.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/tcp_cli_01.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter05/tcp_cli_01
+  TARGET_PDB = tcp_cli_01.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tcp_cli_02
+
+
+#############################################
+# Order-only phony target for tcp_cli_02
+
+build cmake_object_order_depends_target_tcp_cli_02: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/tcp_cli_02.dir/unp/chapter05/tcp_cli_02.c.o: C_COMPILER__tcp_cli_02_ /Users/vitah/Downloads/dev/corki/unp/chapter05/tcp_cli_02.c || cmake_object_order_depends_target_tcp_cli_02
+  DEP_FILE = CMakeFiles/tcp_cli_02.dir/unp/chapter05/tcp_cli_02.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/tcp_cli_02.dir
+  OBJECT_FILE_DIR = CMakeFiles/tcp_cli_02.dir/unp/chapter05
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tcp_cli_02
+
+
+#############################################
+# Link the executable unp/chapter05/tcp_cli_02
+
+build unp/chapter05/tcp_cli_02: C_EXECUTABLE_LINKER__tcp_cli_02_ CMakeFiles/tcp_cli_02.dir/unp/chapter05/tcp_cli_02.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/tcp_cli_02.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter05/tcp_cli_02
+  TARGET_PDB = tcp_cli_02.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tcp_cli_03
+
+
+#############################################
+# Order-only phony target for tcp_cli_03
+
+build cmake_object_order_depends_target_tcp_cli_03: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/tcp_cli_03.dir/unp/chapter05/tcp_cli_03.c.o: C_COMPILER__tcp_cli_03_ /Users/vitah/Downloads/dev/corki/unp/chapter05/tcp_cli_03.c || cmake_object_order_depends_target_tcp_cli_03
+  DEP_FILE = CMakeFiles/tcp_cli_03.dir/unp/chapter05/tcp_cli_03.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/tcp_cli_03.dir
+  OBJECT_FILE_DIR = CMakeFiles/tcp_cli_03.dir/unp/chapter05
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tcp_cli_03
+
+
+#############################################
+# Link the executable unp/chapter05/tcp_cli_03
+
+build unp/chapter05/tcp_cli_03: C_EXECUTABLE_LINKER__tcp_cli_03_ CMakeFiles/tcp_cli_03.dir/unp/chapter05/tcp_cli_03.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/tcp_cli_03.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter05/tcp_cli_03
+  TARGET_PDB = tcp_cli_03.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tcp_srv_01
+
+
+#############################################
+# Order-only phony target for tcp_srv_01
+
+build cmake_object_order_depends_target_tcp_srv_01: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/tcp_srv_01.dir/unp/chapter05/tcp_srv_01.c.o: C_COMPILER__tcp_srv_01_ /Users/vitah/Downloads/dev/corki/unp/chapter05/tcp_srv_01.c || cmake_object_order_depends_target_tcp_srv_01
+  DEP_FILE = CMakeFiles/tcp_srv_01.dir/unp/chapter05/tcp_srv_01.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/tcp_srv_01.dir
+  OBJECT_FILE_DIR = CMakeFiles/tcp_srv_01.dir/unp/chapter05
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tcp_srv_01
+
+
+#############################################
+# Link the executable unp/chapter05/tcp_srv_01
+
+build unp/chapter05/tcp_srv_01: C_EXECUTABLE_LINKER__tcp_srv_01_ CMakeFiles/tcp_srv_01.dir/unp/chapter05/tcp_srv_01.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/tcp_srv_01.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter05/tcp_srv_01
+  TARGET_PDB = tcp_srv_01.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tcp_srv_02
+
+
+#############################################
+# Order-only phony target for tcp_srv_02
+
+build cmake_object_order_depends_target_tcp_srv_02: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/tcp_srv_02.dir/unp/chapter05/tcp_srv_02.c.o: C_COMPILER__tcp_srv_02_ /Users/vitah/Downloads/dev/corki/unp/chapter05/tcp_srv_02.c || cmake_object_order_depends_target_tcp_srv_02
+  DEP_FILE = CMakeFiles/tcp_srv_02.dir/unp/chapter05/tcp_srv_02.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/tcp_srv_02.dir
+  OBJECT_FILE_DIR = CMakeFiles/tcp_srv_02.dir/unp/chapter05
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tcp_srv_02
+
+
+#############################################
+# Link the executable unp/chapter05/tcp_srv_02
+
+build unp/chapter05/tcp_srv_02: C_EXECUTABLE_LINKER__tcp_srv_02_ CMakeFiles/tcp_srv_02.dir/unp/chapter05/tcp_srv_02.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/tcp_srv_02.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter05/tcp_srv_02
+  TARGET_PDB = tcp_srv_02.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tcp_srv_03
+
+
+#############################################
+# Order-only phony target for tcp_srv_03
+
+build cmake_object_order_depends_target_tcp_srv_03: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/tcp_srv_03.dir/unp/chapter05/tcp_srv_03.c.o: C_COMPILER__tcp_srv_03_ /Users/vitah/Downloads/dev/corki/unp/chapter05/tcp_srv_03.c || cmake_object_order_depends_target_tcp_srv_03
+  DEP_FILE = CMakeFiles/tcp_srv_03.dir/unp/chapter05/tcp_srv_03.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/tcp_srv_03.dir
+  OBJECT_FILE_DIR = CMakeFiles/tcp_srv_03.dir/unp/chapter05
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tcp_srv_03
+
+
+#############################################
+# Link the executable unp/chapter05/tcp_srv_03
+
+build unp/chapter05/tcp_srv_03: C_EXECUTABLE_LINKER__tcp_srv_03_ CMakeFiles/tcp_srv_03.dir/unp/chapter05/tcp_srv_03.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/tcp_srv_03.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter05/tcp_srv_03
+  TARGET_PDB = tcp_srv_03.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tcp_srv_04
+
+
+#############################################
+# Order-only phony target for tcp_srv_04
+
+build cmake_object_order_depends_target_tcp_srv_04: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/tcp_srv_04.dir/unp/chapter05/tcp_srv_04.c.o: C_COMPILER__tcp_srv_04_ /Users/vitah/Downloads/dev/corki/unp/chapter05/tcp_srv_04.c || cmake_object_order_depends_target_tcp_srv_04
+  DEP_FILE = CMakeFiles/tcp_srv_04.dir/unp/chapter05/tcp_srv_04.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/tcp_srv_04.dir
+  OBJECT_FILE_DIR = CMakeFiles/tcp_srv_04.dir/unp/chapter05
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tcp_srv_04
+
+
+#############################################
+# Link the executable unp/chapter05/tcp_srv_04
+
+build unp/chapter05/tcp_srv_04: C_EXECUTABLE_LINKER__tcp_srv_04_ CMakeFiles/tcp_srv_04.dir/unp/chapter05/tcp_srv_04.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/tcp_srv_04.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter05/tcp_srv_04
+  TARGET_PDB = tcp_srv_04.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tcp_cli_select_01
+
+
+#############################################
+# Order-only phony target for tcp_cli_select_01
+
+build cmake_object_order_depends_target_tcp_cli_select_01: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/tcp_cli_select_01.dir/unp/chapter06/tcp_cli_select_01.c.o: C_COMPILER__tcp_cli_select_01_ /Users/vitah/Downloads/dev/corki/unp/chapter06/tcp_cli_select_01.c || cmake_object_order_depends_target_tcp_cli_select_01
+  DEP_FILE = CMakeFiles/tcp_cli_select_01.dir/unp/chapter06/tcp_cli_select_01.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/tcp_cli_select_01.dir
+  OBJECT_FILE_DIR = CMakeFiles/tcp_cli_select_01.dir/unp/chapter06
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tcp_cli_select_01
+
+
+#############################################
+# Link the executable unp/chapter06/tcp_cli_select_01
+
+build unp/chapter06/tcp_cli_select_01: C_EXECUTABLE_LINKER__tcp_cli_select_01_ CMakeFiles/tcp_cli_select_01.dir/unp/chapter06/tcp_cli_select_01.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/tcp_cli_select_01.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter06/tcp_cli_select_01
+  TARGET_PDB = tcp_cli_select_01.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tcp_cli_select_02
+
+
+#############################################
+# Order-only phony target for tcp_cli_select_02
+
+build cmake_object_order_depends_target_tcp_cli_select_02: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/tcp_cli_select_02.dir/unp/chapter06/tcp_cli_select_02.c.o: C_COMPILER__tcp_cli_select_02_ /Users/vitah/Downloads/dev/corki/unp/chapter06/tcp_cli_select_02.c || cmake_object_order_depends_target_tcp_cli_select_02
+  DEP_FILE = CMakeFiles/tcp_cli_select_02.dir/unp/chapter06/tcp_cli_select_02.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/tcp_cli_select_02.dir
+  OBJECT_FILE_DIR = CMakeFiles/tcp_cli_select_02.dir/unp/chapter06
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tcp_cli_select_02
+
+
+#############################################
+# Link the executable unp/chapter06/tcp_cli_select_02
+
+build unp/chapter06/tcp_cli_select_02: C_EXECUTABLE_LINKER__tcp_cli_select_02_ CMakeFiles/tcp_cli_select_02.dir/unp/chapter06/tcp_cli_select_02.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/tcp_cli_select_02.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter06/tcp_cli_select_02
+  TARGET_PDB = tcp_cli_select_02.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tcp_srv_select_01
+
+
+#############################################
+# Order-only phony target for tcp_srv_select_01
+
+build cmake_object_order_depends_target_tcp_srv_select_01: phony || cmake_object_order_depends_target_unpLib
+
+build CMakeFiles/tcp_srv_select_01.dir/unp/chapter06/tcp_srv_select_01.c.o: C_COMPILER__tcp_srv_select_01_ /Users/vitah/Downloads/dev/corki/unp/chapter06/tcp_srv_select_01.c || cmake_object_order_depends_target_tcp_srv_select_01
+  DEP_FILE = CMakeFiles/tcp_srv_select_01.dir/unp/chapter06/tcp_srv_select_01.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/tcp_srv_select_01.dir
+  OBJECT_FILE_DIR = CMakeFiles/tcp_srv_select_01.dir/unp/chapter06
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tcp_srv_select_01
+
+
+#############################################
+# Link the executable unp/chapter06/tcp_srv_select_01
+
+build unp/chapter06/tcp_srv_select_01: C_EXECUTABLE_LINKER__tcp_srv_select_01_ CMakeFiles/tcp_srv_select_01.dir/unp/chapter06/tcp_srv_select_01.c.o | unp/lib/lib.out/libunpLib.a || unp/lib/lib.out/libunpLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = unp/lib/lib.out/libunpLib.a
+  OBJECT_DIR = CMakeFiles/tcp_srv_select_01.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/chapter06/tcp_srv_select_01
+  TARGET_PDB = tcp_srv_select_01.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/vitah/Downloads/dev/corki && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/vitah/Downloads/dev/corki && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/vitah/Downloads/dev/corki -B/Users/vitah/Downloads/dev/corki
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/vitah/Downloads/dev/corki/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target unpLib
+
+
+#############################################
+# Order-only phony target for unpLib
+
+build cmake_object_order_depends_target_unpLib: phony || unp/lib/lib.out/CMakeFiles/unpLib.dir
+
+build unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_error.c.o: C_COMPILER__unpLib_ /Users/vitah/Downloads/dev/corki/unp/lib/wrap_error.c || cmake_object_order_depends_target_unpLib
+  DEP_FILE = unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_error.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = unp/lib/lib.out/CMakeFiles/unpLib.dir
+  OBJECT_FILE_DIR = unp/lib/lib.out/CMakeFiles/unpLib.dir
+
+build unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_read_write.c.o: C_COMPILER__unpLib_ /Users/vitah/Downloads/dev/corki/unp/lib/wrap_read_write.c || cmake_object_order_depends_target_unpLib
+  DEP_FILE = unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_read_write.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = unp/lib/lib.out/CMakeFiles/unpLib.dir
+  OBJECT_FILE_DIR = unp/lib/lib.out/CMakeFiles/unpLib.dir
+
+build unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_signal.c.o: C_COMPILER__unpLib_ /Users/vitah/Downloads/dev/corki/unp/lib/wrap_signal.c || cmake_object_order_depends_target_unpLib
+  DEP_FILE = unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_signal.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = unp/lib/lib.out/CMakeFiles/unpLib.dir
+  OBJECT_FILE_DIR = unp/lib/lib.out/CMakeFiles/unpLib.dir
+
+build unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_socket.c.o: C_COMPILER__unpLib_ /Users/vitah/Downloads/dev/corki/unp/lib/wrap_socket.c || cmake_object_order_depends_target_unpLib
+  DEP_FILE = unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_socket.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = unp/lib/lib.out/CMakeFiles/unpLib.dir
+  OBJECT_FILE_DIR = unp/lib/lib.out/CMakeFiles/unpLib.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target unpLib
+
+
+#############################################
+# Link the static library unp/lib/lib.out/libunpLib.a
+
+build unp/lib/lib.out/libunpLib.a: C_STATIC_LIBRARY_LINKER__unpLib_ unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_error.c.o unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_read_write.c.o unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_signal.c.o unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_socket.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  OBJECT_DIR = unp/lib/lib.out/CMakeFiles/unpLib.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = unp/lib/lib.out/libunpLib.a
+  TARGET_PDB = unpLib.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build unp/lib/lib.out/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/vitah/Downloads/dev/corki/unp/lib/lib.out && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build unp/lib/lib.out/edit_cache: phony unp/lib/lib.out/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build unp/lib/lib.out/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/vitah/Downloads/dev/corki/unp/lib/lib.out && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/vitah/Downloads/dev/corki -B/Users/vitah/Downloads/dev/corki
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build unp/lib/lib.out/rebuild_cache: phony unp/lib/lib.out/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+build catch_sigusr: phony apue/chapter10/catch_sigusr
+
+build echo_time_fork_tcp_srv: phony unp/chapter04/echo_time_fork_tcp_srv
+
+build echo_time_tcp_srv: phony unp/chapter01/echo_time_tcp_srv
+
+build get_time_tcp_cli: phony unp/chapter01/get_time_tcp_cli
+
+build get_timestamp: phony other/get_timestamp
+
+build libunpLib.a: phony unp/lib/lib.out/libunpLib.a
+
+build tcp_cli_01: phony unp/chapter05/tcp_cli_01
+
+build tcp_cli_02: phony unp/chapter05/tcp_cli_02
+
+build tcp_cli_03: phony unp/chapter05/tcp_cli_03
+
+build tcp_cli_select_01: phony unp/chapter06/tcp_cli_select_01
+
+build tcp_cli_select_02: phony unp/chapter06/tcp_cli_select_02
+
+build tcp_srv_01: phony unp/chapter05/tcp_srv_01
+
+build tcp_srv_02: phony unp/chapter05/tcp_srv_02
+
+build tcp_srv_03: phony unp/chapter05/tcp_srv_03
+
+build tcp_srv_04: phony unp/chapter05/tcp_srv_04
+
+build tcp_srv_select_01: phony unp/chapter06/tcp_srv_select_01
+
+build unpLib: phony unp/lib/lib.out/libunpLib.a
+
+build use_connect: phony unp/chapter04/use_connect
+
+build use_fork: phony other/use_fork
+
+build use_inet_pton: phony unp/chapter04/use_inet_pton
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/vitah/Downloads/dev/corki
+
+build all: phony apue/chapter10/catch_sigusr other/get_timestamp other/use_fork unp/chapter01/echo_time_tcp_srv unp/chapter01/get_time_tcp_cli unp/chapter04/echo_time_fork_tcp_srv unp/chapter04/use_connect unp/chapter04/use_inet_pton unp/chapter05/tcp_cli_01 unp/chapter05/tcp_cli_02 unp/chapter05/tcp_cli_03 unp/chapter05/tcp_srv_01 unp/chapter05/tcp_srv_02 unp/chapter05/tcp_srv_03 unp/chapter05/tcp_srv_04 unp/chapter06/tcp_cli_select_01 unp/chapter06/tcp_cli_select_02 unp/chapter06/tcp_srv_select_01 unp/lib/lib.out/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/vitah/Downloads/dev/corki/unp/lib/lib.out
+
+build unp/lib/lib.out/all: phony unp/lib/lib.out/libunpLib.a
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake CMakeLists.txt unp/lib/CMakeLists.txt
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake CMakeLists.txt unp/lib/CMakeLists.txt: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
