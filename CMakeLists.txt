@@ -6,6 +6,10 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./apue/chapter10)
 add_executable(catch_sigusr apue/chapter10/catch_sigusr.c)
 
+# toyrds
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./toyrds)
+add_executable(tyrds_srv toyrds/toy_rds_srv.c)
+
 # unp
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./other)
 add_executable(get_timestamp other/get_timestamp.c)

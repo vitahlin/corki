@@ -17,6 +17,7 @@ int main(int argc, char **argv) {
     // 创建一个套接字
     int sock_fd = wrapSocket(AF_INET, SOCK_STREAM, 0);
 
+    // 套接字地址
     struct sockaddr_in serv_address;
     bzero(&serv_address, sizeof(serv_address));
 
@@ -27,7 +28,7 @@ int main(int argc, char **argv) {
 
     // 进行IP地址转换
     wrapInetPton(AF_INET, serv_ip, &serv_address.sin_addr);
-
+    
     wrapConnect(sock_fd, (const struct sockaddr *) &serv_address, sizeof(serv_address));
 
     ssize_t n;

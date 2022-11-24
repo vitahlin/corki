@@ -64,6 +64,37 @@ build apue/chapter10/catch_sigusr: C_EXECUTABLE_LINKER__catch_sigusr_ CMakeFiles
   TARGET_PDB = catch_sigusr.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target tyrds_srv
+
+
+#############################################
+# Order-only phony target for tyrds_srv
+
+build cmake_object_order_depends_target_tyrds_srv: phony || CMakeFiles/tyrds_srv.dir
+
+build CMakeFiles/tyrds_srv.dir/toyrds/toy_rds_srv.c.o: C_COMPILER__tyrds_srv_ /Users/vitah/Downloads/dev/corki/toyrds/toy_rds_srv.c || cmake_object_order_depends_target_tyrds_srv
+  DEP_FILE = CMakeFiles/tyrds_srv.dir/toyrds/toy_rds_srv.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = CMakeFiles/tyrds_srv.dir
+  OBJECT_FILE_DIR = CMakeFiles/tyrds_srv.dir/toyrds
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tyrds_srv
+
+
+#############################################
+# Link the executable toyrds/tyrds_srv
+
+build toyrds/tyrds_srv: C_EXECUTABLE_LINKER__tyrds_srv_ CMakeFiles/tyrds_srv.dir/toyrds/toy_rds_srv.c.o
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  OBJECT_DIR = CMakeFiles/tyrds_srv.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = toyrds/tyrds_srv
+  TARGET_PDB = tyrds_srv.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target get_timestamp
 
 
@@ -739,6 +770,8 @@ build tcp_srv_04: phony unp/chapter05/tcp_srv_04
 
 build tcp_srv_select_01: phony unp/chapter06/tcp_srv_select_01
 
+build tyrds_srv: phony toyrds/tyrds_srv
+
 build unpLib: phony unp/lib/lib.out/libunpLib.a
 
 build use_connect: phony unp/chapter04/use_connect
@@ -755,7 +788,7 @@ build use_inet_pton: phony unp/chapter04/use_inet_pton
 #############################################
 # Folder: /Users/vitah/Downloads/dev/corki
 
-build all: phony apue/chapter10/catch_sigusr other/get_timestamp other/use_fork unp/chapter01/echo_time_tcp_srv unp/chapter01/get_time_tcp_cli unp/chapter04/echo_time_fork_tcp_srv unp/chapter04/use_connect unp/chapter04/use_inet_pton unp/chapter05/tcp_cli_01 unp/chapter05/tcp_cli_02 unp/chapter05/tcp_cli_03 unp/chapter05/tcp_srv_01 unp/chapter05/tcp_srv_02 unp/chapter05/tcp_srv_03 unp/chapter05/tcp_srv_04 unp/chapter06/tcp_cli_select_01 unp/chapter06/tcp_cli_select_02 unp/chapter06/tcp_srv_select_01 unp/lib/lib.out/all
+build all: phony apue/chapter10/catch_sigusr toyrds/tyrds_srv other/get_timestamp other/use_fork unp/chapter01/echo_time_tcp_srv unp/chapter01/get_time_tcp_cli unp/chapter04/echo_time_fork_tcp_srv unp/chapter04/use_connect unp/chapter04/use_inet_pton unp/chapter05/tcp_cli_01 unp/chapter05/tcp_cli_02 unp/chapter05/tcp_cli_03 unp/chapter05/tcp_srv_01 unp/chapter05/tcp_srv_02 unp/chapter05/tcp_srv_03 unp/chapter05/tcp_srv_04 unp/chapter06/tcp_cli_select_01 unp/chapter06/tcp_cli_select_02 unp/chapter06/tcp_srv_select_01 unp/lib/lib.out/all
 
 # =============================================================================
 
