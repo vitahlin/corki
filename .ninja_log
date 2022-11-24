@@ -6,3 +6,5 @@
 0	38	1669038571928997215	unp/lib/lib.out/CMakeFiles/unpLib.dir/wrap_error.c.o	7fc3cc46e2826c7e
 39	645	1669038572538333000	unp/lib/lib.out/libunpLib.a	70100017547127f7
 646	691	1669038572583183201	unp/chapter01/get_time_tcp_cli	16026a50cb4cfc23
+1	82	1669286575519739934	CMakeFiles/get_time_tcp_cli.dir/unp/chapter01/get_time_tcp_cli.c.o	f761f36cececcfd1
+82	194	1669286575632363587	unp/chapter01/get_time_tcp_cli	16026a50cb4cfc23

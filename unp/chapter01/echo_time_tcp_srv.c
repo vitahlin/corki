@@ -6,14 +6,13 @@
 #include "../lib/unp.h"
 
 int main(int argc, char **argv) {
-    int listen_fd, conn_fd;
     struct sockaddr_in serv_addr, cli_addr;
     socklen_t len;
     char buff[MAX_SIZE];
     time_t ticks;
 
     // SOCK_STREAM套接字类型
-    listen_fd = wrapSocket(AF_INET, SOCK_STREAM, 0);
+    int listen_fd = wrapSocket(AF_INET, SOCK_STREAM, 0);
 
     bzero(&serv_addr, sizeof(serv_addr));
 
@@ -32,7 +31,7 @@ int main(int argc, char **argv) {
     printf("time server running...\n");
     for (;;) {
         // 调用accept返回用于传输的socket的文件描述符
-        conn_fd = wrapAccept(listen_fd, (struct sockaddr *) &cli_addr, &len);
+        int conn_fd = wrapAccept(listen_fd, (struct sockaddr *) &cli_addr, &len);
 
         printf("New client connect IP=%s, port=%d, conn_id=%d\n",
                inet_ntop(AF_INET, &cli_addr.sin_addr, buff, sizeof(buff)),

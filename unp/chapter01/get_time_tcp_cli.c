@@ -1,16 +1,10 @@
 /**
- * 简单从时间服务器获取时间的tcp客户端程序
+ * 获取时间
  */
-
 #include "../lib/constant.h"
 #include "../lib/unp.h"
 
 int main(int argc, char **argv) {
-    int sock_fd;
-    ssize_t n;
-    struct sockaddr_in serv_address;
-    char receive_line[MAX_SIZE + 1];
-
     char serv_ip[16];
     int port;
 
@@ -21,8 +15,9 @@ int main(int argc, char **argv) {
     scanf("%d", &port);
 
     // 创建一个套接字
-    sock_fd = wrapSocket(AF_INET, SOCK_STREAM, 0);
+    int sock_fd = wrapSocket(AF_INET, SOCK_STREAM, 0);
 
+    struct sockaddr_in serv_address;
     bzero(&serv_address, sizeof(serv_address));
 
     // 协议族
@@ -35,6 +30,8 @@ int main(int argc, char **argv) {
 
     wrapConnect(sock_fd, (const struct sockaddr *) &serv_address, sizeof(serv_address));
 
+    ssize_t n;
+    char receive_line[MAX_SIZE + 1];
     while ((n = read(sock_fd, receive_line, MAX_SIZE)) > 0) {
         receive_line[n] = 0;
         if (fputs(receive_line, stdout) == EOF) {
