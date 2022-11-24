@@ -39,5 +39,4 @@ Makefile
 .cmake/
 .idea/
 
-
 build/
