@@ -7,7 +7,7 @@
  */
 
 #include "../../apue_old/src/lib/apue.h"
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 static void SigcldHandler(int);
 

@@ -2,7 +2,7 @@
  * exec函数示例
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 char *env_init[] = {"USER=unknown", "PATH=/tmp", NULL};
 

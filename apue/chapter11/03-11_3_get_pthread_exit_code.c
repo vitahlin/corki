@@ -2,7 +2,7 @@
  * 获取已终止的线程的退出码
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 void* ThreadFunc1(void* arg) {
     printf("thread 1 returnning\n");

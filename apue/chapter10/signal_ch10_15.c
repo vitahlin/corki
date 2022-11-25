@@ -5,7 +5,7 @@
  * 另一种方法是用SIG_UNBLOCK使阻塞的信号不再阻塞。
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 static void SigQuitHandler(int);
 

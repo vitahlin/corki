@@ -9,7 +9,7 @@
  * 多次演示时，可能会出现父进程子进程交替输出对情况，这就是产生了竞争条件
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 static void output(char *str) {
     char *ptr;

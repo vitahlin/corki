@@ -3,7 +3,7 @@
  * Todo：macOS不支持该方法
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 int main(int argc, const char** argv) {
     int err;

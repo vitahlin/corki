@@ -10,7 +10,7 @@
 
 #include <setjmp.h>
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 static jmp_buf env_alrm;
 

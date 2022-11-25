@@ -5,7 +5,7 @@
  * kill -USR1 xxx 发送USR1信号
  * kill -USR2 xxx 发送USR2信号
  */
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 static void SigUsrHandler(int);
 

@@ -2,7 +2,7 @@
  * fork函数，子进程对变量所做的改变并不影响父进程该变量的值
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 int global_var = 6;
 char buf[] = "A write to stdout\n";

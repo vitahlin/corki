@@ -4,7 +4,7 @@
  * 示例程序用于捕捉中断和退出信号，但是希望仅当捕捉到退出信号时，才唤醒主例程。
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 volatile sig_atomic_t quit_flag;
 

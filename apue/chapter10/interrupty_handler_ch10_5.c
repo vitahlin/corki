@@ -16,7 +16,7 @@
 #include <pwd.h>
 #include <sys/types.h>
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 static void MyAlarm(int sig_num) {
     struct passwd* root_ptr;

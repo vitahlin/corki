@@ -4,7 +4,7 @@
  * Todo：macOS编译不通过
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 #define NTHR 8
 #define NUMBER 8000000L

@@ -3,7 +3,7 @@
  * 读写锁的使用
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 struct {
     pthread_rwlock_t rwlock;

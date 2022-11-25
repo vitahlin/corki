@@ -2,7 +2,7 @@
  * 调用自己实现的system函数示例
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 int main(int argc, const char **argv) {
     int status;

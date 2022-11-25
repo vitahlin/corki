@@ -28,7 +28,7 @@
 #include <setjmp.h>
 #include <time.h>
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 void PrintMask(const char* str);
 

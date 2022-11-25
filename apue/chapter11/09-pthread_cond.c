@@ -3,7 +3,7 @@
  * 线程条件变量的使用，2个线程对count每次分别加1，第三个线程等count大于10后一次加100
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 #define NUM_THREADS 3
 #define TOTAL_COUNT 10

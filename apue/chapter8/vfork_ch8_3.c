@@ -6,7 +6,7 @@
  * 子进程对变量做增1的操作，结果改变了父进程中的变量值，因为子进程在父进程的地址空间中运行
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 int global_var = 6;
 

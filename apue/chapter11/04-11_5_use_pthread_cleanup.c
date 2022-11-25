@@ -16,7 +16,7 @@
  * 就不会被调用。同时，清理处理程序是按照与它们安装时相反的顺序被调用。
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 void Cleanup(void* arg) {
     printf("cleanup: %s\n", (char*)arg);

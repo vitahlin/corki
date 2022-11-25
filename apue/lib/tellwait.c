@@ -1,7 +1,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <stdarg.h>
-#include "./apue.h"
+#include "apue.h"
 
 /**
  * volatile是一个类型修饰符，确保本条执行不会因为编译器优化而忽略，且要求每次直接读值

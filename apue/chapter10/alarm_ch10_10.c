@@ -13,7 +13,7 @@
  * 如果系统调用是自动重启动的，则当从SIGALRM信号处理程序返回时，read并不被中断，这种情况下，设置时间限制不起作用。
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 static void SigAlrm(int sig_num) {}
 

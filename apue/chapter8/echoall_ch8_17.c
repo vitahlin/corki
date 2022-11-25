@@ -2,7 +2,7 @@
  * 回显所有命令行参数和及全部环境表
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 int main(int argc, const char **argv) {
     int i;

@@ -11,7 +11,7 @@
  * POSIX.1声明当信号处理程序返回时，abort终止该进程。
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 void MyAbort(void) {
     sigset_t mask;

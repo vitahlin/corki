@@ -2,7 +2,7 @@
  * 线程的互斥锁示例
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 int num = 0;
 

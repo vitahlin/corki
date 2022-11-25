@@ -21,7 +21,7 @@
  * sigsuspend的用法，保护代码临界区，使其不被特定信号中断
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 void PrintMask(const char* str);
 static void SigInt(int);

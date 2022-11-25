@@ -14,7 +14,7 @@
  * 如果发生了这种情况，则在调用pause后，如果没有捕捉到其他信号，调用者将被永远挂起。
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 static void SigAlrm(int);
 

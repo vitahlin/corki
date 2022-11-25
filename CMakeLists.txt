@@ -2,17 +2,23 @@ cmake_minimum_required(VERSION 3.23)
 project(corki)
 set(CMAKE_C_STANDARD 11)
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib lib.out)
+#添加子目录
+ADD_SUBDIRECTORY(apue)
 
+#ADD_SUBDIRECTORY()
 # apue
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./apue/chapter10)
-add_executable(catch_sigusr_ch10_2 apue/chapter10/catch_sigusr_ch10_2.c)
+#add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/apue/lib ${CMAKE_CURRENT_SOURCE_DIR}/apue/lib/lib.out)
+#
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./apue/chapter8)
+#add_executable(fork_ch8_1 apue/chapter8/fork_ch8_1.c)
 
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./apue/chapter10)
+#add_executable(catch_sigusr_ch10_2 apue/chapter10/catch_sigusr_ch10_2.c)
 
 # toy_rds
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./toy_rds)
-add_executable(toy_rds_srv toy_rds/toy_rds_srv.c)
-target_link_libraries(toy_rds_srv apueLib)
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./toy_rds)
+#add_executable(toy_rds_srv toy_rds/toy_rds_srv.c)
+#target_link_libraries(toy_rds_srv apueLib)
 
 #
 ## unp

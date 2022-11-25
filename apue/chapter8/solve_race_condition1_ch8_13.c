@@ -2,7 +2,7 @@
  * 解决进程的竞争条件，父进程先运行
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 static void output(char *str) {
     char *ptr;

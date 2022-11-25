@@ -3,7 +3,7 @@
  * 编写一个程序创建一个僵死进程，然后调用system执行ps(l)命令以验证该进程是僵死进程
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 int main(int argc, const char **argv) {
     pid_t pid;

@@ -2,7 +2,7 @@
  * 打印线程ID
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 void PrintIds(const char* s) {
     pid_t pid;

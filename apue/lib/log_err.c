@@ -1,10 +1,10 @@
 #include <errno.h>
 #include <stdarg.h>
-#include "./apue.h"
+#include "apue.h"
 
-static void ErrorDoIt(int, int, const char*, va_list);
+static void ErrorDoIt(int, int, const char *, va_list);
 
-void ErrorReturn(const char* fmt, ...) {
+void ErrorReturn(const char *fmt, ...) {
     va_list ap;
 
     va_start(ap, fmt);
@@ -12,7 +12,7 @@ void ErrorReturn(const char* fmt, ...) {
     va_end(ap);
 }
 
-void ErrorSystem(const char* fmt, ...) {
+void ErrorSystem(const char *fmt, ...) {
     va_list ap;
 
     va_start(ap, fmt);
@@ -21,7 +21,7 @@ void ErrorSystem(const char* fmt, ...) {
     exit(1);
 }
 
-void ErrorQuit(const char* fmt, ...) {
+void ErrorQuit(const char *fmt, ...) {
     va_list ap;
 
     va_start(ap, fmt);
@@ -30,7 +30,7 @@ void ErrorQuit(const char* fmt, ...) {
     exit(1);
 }
 
-static void ErrorDoIt(int errnoflag, int error, const char* fmt, va_list ap) {
+static void ErrorDoIt(int errnoflag, int error, const char *fmt, va_list ap) {
     char buf[MAXLINE];
 
     vsnprintf(buf, MAXLINE - 1, fmt, ap);

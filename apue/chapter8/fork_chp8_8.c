@@ -5,7 +5,7 @@
  * 会先执行，在fork之后，如果不使第二个子进程休眠，那么它可能比其父进程先执行，于是它打印的父进程ID将是创建它的父进程，而不是init进程
  */
 
-#include "../../lib/apue.h"
+#include "../lib/apue.h"
 
 int main(int argc, const char **argv) {
     pid_t pid;

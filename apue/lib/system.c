@@ -1,6 +1,6 @@
-#include "./apue.h"
+#include "apue.h"
 
-int MySystem(const char* cmd_string) {
+int MySystem(const char *cmd_string) {
     pid_t pid;
     int status;
 
@@ -11,7 +11,7 @@ int MySystem(const char* cmd_string) {
     if ((pid = fork()) < 0) {
         status = -1;
     } else if (pid == 0) {
-        execl("/bin/sh", "sh", "-c", cmd_string, (char*)0);
+        execl("/bin/sh", "sh", "-c", cmd_string, (char *) 0);
 
         /**
          *  如果无法启动shell命令，system将返回127
@@ -42,7 +42,7 @@ void PrintExit(int status) {
 #ifdef WCOREDUMP
                WCOREDUMP(status) ? "(core file generated)" : "");
 #else
-               "");
+        "");
 #endif
     } else if (WIFSTOPPED(status)) {
         printf("child stopped, signal number=%d\n", WSTOPSIG(status));
