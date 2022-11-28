@@ -92,6 +92,38 @@ build apue/chapter8/test: C_EXECUTABLE_LINKER__test_ apue/CMakeFiles/test.dir/ch
   TARGET_FILE = apue/chapter8/test
   TARGET_PDB = test.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target fork_ch8_1
+
+
+#############################################
+# Order-only phony target for fork_ch8_1
+
+build cmake_object_order_depends_target_fork_ch8_1: phony || cmake_object_order_depends_target_apueLib
+
+build apue/CMakeFiles/fork_ch8_1.dir/chapter8/fork_ch8_1.c.o: C_COMPILER__fork_ch8_1_ /Users/vitah/Downloads/dev/corki/apue/chapter8/fork_ch8_1.c || cmake_object_order_depends_target_fork_ch8_1
+  DEP_FILE = apue/CMakeFiles/fork_ch8_1.dir/chapter8/fork_ch8_1.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/CMakeFiles/fork_ch8_1.dir
+  OBJECT_FILE_DIR = apue/CMakeFiles/fork_ch8_1.dir/chapter8
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target fork_ch8_1
+
+
+#############################################
+# Link the executable apue/chapter8/fork_ch8_1
+
+build apue/chapter8/fork_ch8_1: C_EXECUTABLE_LINKER__fork_ch8_1_ apue/CMakeFiles/fork_ch8_1.dir/chapter8/fork_ch8_1.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/CMakeFiles/fork_ch8_1.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/fork_ch8_1
+  TARGET_PDB = fork_ch8_1.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -193,6 +225,8 @@ build apue/lib/lib.out/rebuild_cache: phony apue/lib/lib.out/CMakeFiles/rebuild_
 
 build apueLib: phony apue/lib/lib.out/libapueLib.a
 
+build fork_ch8_1: phony apue/chapter8/fork_ch8_1
+
 build libapueLib.a: phony apue/lib/lib.out/libapueLib.a
 
 build test: phony apue/chapter8/test
@@ -212,7 +246,7 @@ build all: phony apue/all
 #############################################
 # Folder: /Users/vitah/Downloads/dev/corki/apue
 
-build apue/all: phony apue/chapter8/test apue/lib/lib.out/all
+build apue/all: phony apue/chapter8/test apue/chapter8/fork_ch8_1 apue/lib/lib.out/all
 
 # =============================================================================
 
