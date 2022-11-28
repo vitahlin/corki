@@ -5,14 +5,13 @@
 #include "../lib/apue.h"
 
 int main(int argc, const char **argv) {
-    int i;
-    char **ptr;
     extern char **environ;
 
-    for (i = 0; i < argc; i++) {
+    for (int i = 0; i < argc; i++) {
         printf("argv[%d] %s\n", i, argv[i]);
     }
 
+    char **ptr;
     for (ptr = environ; *ptr != 0; ptr++) {
         printf("%s\n", *ptr);
     }

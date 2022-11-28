@@ -6,15 +6,12 @@
 #include "../lib/apue.h"
 
 int main(int argc, const char **argv) {
-    pid_t pid;
-
-    int status;
-
     printf("习题8.6\n");
     printf(
         "编写一个程序创建一个僵死进程，然后调用system函数执行ps命令以严重该进程"
         "是僵死进程\n");
 
+    pid_t pid;
     if ((pid = fork()) < 0) {
         ErrorQuit("Fork error");
     } else if (pid == 0) {
@@ -22,6 +19,8 @@ int main(int argc, const char **argv) {
     }
 
     printf("Child process pid %d\n", pid);
+
+    int status;
     if ((status = MySystem("ps -el")) < 0) {
         ErrorSystem("MySystem error");
     }
