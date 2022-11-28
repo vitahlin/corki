@@ -6,3 +6,4 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib ${CMAKE_CURRENT_SOURCE_DIR}/lib
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./chapter8)
 add_executable(test chapter8/test.c)
+add_executable(fork_ch8_1 chapter8/fork_ch8_1.c)
