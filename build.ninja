@@ -61,69 +61,6 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # /Users/vitah/Downloads/dev/corki/CMakeLists.txt
 # =============================================================================
 
-# =============================================================================
-# Object build statements for EXECUTABLE target test
-
-
-#############################################
-# Order-only phony target for test
-
-build cmake_object_order_depends_target_test: phony || apue/CMakeFiles/test.dir
-
-build apue/CMakeFiles/test.dir/chapter8/test.c.o: C_COMPILER__test_ /Users/vitah/Downloads/dev/corki/apue/chapter8/test.c || cmake_object_order_depends_target_test
-  DEP_FILE = apue/CMakeFiles/test.dir/chapter8/test.c.o.d
-  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
-  OBJECT_DIR = apue/CMakeFiles/test.dir
-  OBJECT_FILE_DIR = apue/CMakeFiles/test.dir/chapter8
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target test
-
-
-#############################################
-# Link the executable apue/chapter8/test
-
-build apue/chapter8/test: C_EXECUTABLE_LINKER__test_ apue/CMakeFiles/test.dir/chapter8/test.c.o
-  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
-  OBJECT_DIR = apue/CMakeFiles/test.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = apue/chapter8/test
-  TARGET_PDB = test.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target fork_ch8_1
-
-
-#############################################
-# Order-only phony target for fork_ch8_1
-
-build cmake_object_order_depends_target_fork_ch8_1: phony || cmake_object_order_depends_target_apueLib
-
-build apue/CMakeFiles/fork_ch8_1.dir/chapter8/fork_ch8_1.c.o: C_COMPILER__fork_ch8_1_ /Users/vitah/Downloads/dev/corki/apue/chapter8/fork_ch8_1.c || cmake_object_order_depends_target_fork_ch8_1
-  DEP_FILE = apue/CMakeFiles/fork_ch8_1.dir/chapter8/fork_ch8_1.c.o.d
-  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
-  OBJECT_DIR = apue/CMakeFiles/fork_ch8_1.dir
-  OBJECT_FILE_DIR = apue/CMakeFiles/fork_ch8_1.dir/chapter8
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target fork_ch8_1
-
-
-#############################################
-# Link the executable apue/chapter8/fork_ch8_1
-
-build apue/chapter8/fork_ch8_1: C_EXECUTABLE_LINKER__fork_ch8_1_ apue/CMakeFiles/fork_ch8_1.dir/chapter8/fork_ch8_1.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
-  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
-  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
-  OBJECT_DIR = apue/CMakeFiles/fork_ch8_1.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = apue/chapter8/fork_ch8_1
-  TARGET_PDB = fork_ch8_1.dbg
-
 
 #############################################
 # Utility command for edit_cache
@@ -151,6 +88,419 @@ build apue/rebuild_cache: phony apue/CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
 # /Users/vitah/Downloads/dev/corki/apue/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target CMakeCCompilerId
+
+
+#############################################
+# Order-only phony target for CMakeCCompilerId
+
+build cmake_object_order_depends_target_CMakeCCompilerId: phony || cmake_object_order_depends_target_apueLib
+
+build apue/chapter8/CMakeFiles/CMakeCCompilerId.dir/CMakeFiles/3.25.0/CompilerIdC/CMakeCCompilerId.c.o: C_COMPILER__CMakeCCompilerId_ /Users/vitah/Downloads/dev/corki/apue/chapter8/CMakeFiles/3.25.0/CompilerIdC/CMakeCCompilerId.c || cmake_object_order_depends_target_CMakeCCompilerId
+  DEP_FILE = apue/chapter8/CMakeFiles/CMakeCCompilerId.dir/CMakeFiles/3.25.0/CompilerIdC/CMakeCCompilerId.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/chapter8/CMakeFiles/CMakeCCompilerId.dir
+  OBJECT_FILE_DIR = apue/chapter8/CMakeFiles/CMakeCCompilerId.dir/CMakeFiles/3.25.0/CompilerIdC
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target CMakeCCompilerId
+
+
+#############################################
+# Link the executable apue/chapter8/CMakeCCompilerId
+
+build apue/chapter8/CMakeCCompilerId: C_EXECUTABLE_LINKER__CMakeCCompilerId_ apue/chapter8/CMakeFiles/CMakeCCompilerId.dir/CMakeFiles/3.25.0/CompilerIdC/CMakeCCompilerId.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/chapter8/CMakeFiles/CMakeCCompilerId.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/CMakeCCompilerId
+  TARGET_PDB = CMakeCCompilerId.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target echo_all_ch8_17
+
+
+#############################################
+# Order-only phony target for echo_all_ch8_17
+
+build cmake_object_order_depends_target_echo_all_ch8_17: phony || cmake_object_order_depends_target_apueLib
+
+build apue/chapter8/CMakeFiles/echo_all_ch8_17.dir/echo_all_ch8_17.c.o: C_COMPILER__echo_all_ch8_17_ /Users/vitah/Downloads/dev/corki/apue/chapter8/echo_all_ch8_17.c || cmake_object_order_depends_target_echo_all_ch8_17
+  DEP_FILE = apue/chapter8/CMakeFiles/echo_all_ch8_17.dir/echo_all_ch8_17.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/chapter8/CMakeFiles/echo_all_ch8_17.dir
+  OBJECT_FILE_DIR = apue/chapter8/CMakeFiles/echo_all_ch8_17.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target echo_all_ch8_17
+
+
+#############################################
+# Link the executable apue/chapter8/echo_all_ch8_17
+
+build apue/chapter8/echo_all_ch8_17: C_EXECUTABLE_LINKER__echo_all_ch8_17_ apue/chapter8/CMakeFiles/echo_all_ch8_17.dir/echo_all_ch8_17.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/chapter8/CMakeFiles/echo_all_ch8_17.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/echo_all_ch8_17
+  TARGET_PDB = echo_all_ch8_17.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target ex8_6
+
+
+#############################################
+# Order-only phony target for ex8_6
+
+build cmake_object_order_depends_target_ex8_6: phony || cmake_object_order_depends_target_apueLib
+
+build apue/chapter8/CMakeFiles/ex8_6.dir/ex8_6.c.o: C_COMPILER__ex8_6_ /Users/vitah/Downloads/dev/corki/apue/chapter8/ex8_6.c || cmake_object_order_depends_target_ex8_6
+  DEP_FILE = apue/chapter8/CMakeFiles/ex8_6.dir/ex8_6.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/chapter8/CMakeFiles/ex8_6.dir
+  OBJECT_FILE_DIR = apue/chapter8/CMakeFiles/ex8_6.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ex8_6
+
+
+#############################################
+# Link the executable apue/chapter8/ex8_6
+
+build apue/chapter8/ex8_6: C_EXECUTABLE_LINKER__ex8_6_ apue/chapter8/CMakeFiles/ex8_6.dir/ex8_6.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/chapter8/CMakeFiles/ex8_6.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/ex8_6
+  TARGET_PDB = ex8_6.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target exec_ch8_16
+
+
+#############################################
+# Order-only phony target for exec_ch8_16
+
+build cmake_object_order_depends_target_exec_ch8_16: phony || cmake_object_order_depends_target_apueLib
+
+build apue/chapter8/CMakeFiles/exec_ch8_16.dir/exec_ch8_16.c.o: C_COMPILER__exec_ch8_16_ /Users/vitah/Downloads/dev/corki/apue/chapter8/exec_ch8_16.c || cmake_object_order_depends_target_exec_ch8_16
+  DEP_FILE = apue/chapter8/CMakeFiles/exec_ch8_16.dir/exec_ch8_16.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/chapter8/CMakeFiles/exec_ch8_16.dir
+  OBJECT_FILE_DIR = apue/chapter8/CMakeFiles/exec_ch8_16.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target exec_ch8_16
+
+
+#############################################
+# Link the executable apue/chapter8/exec_ch8_16
+
+build apue/chapter8/exec_ch8_16: C_EXECUTABLE_LINKER__exec_ch8_16_ apue/chapter8/CMakeFiles/exec_ch8_16.dir/exec_ch8_16.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/chapter8/CMakeFiles/exec_ch8_16.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/exec_ch8_16
+  TARGET_PDB = exec_ch8_16.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target fork_ch8_1
+
+
+#############################################
+# Order-only phony target for fork_ch8_1
+
+build cmake_object_order_depends_target_fork_ch8_1: phony || cmake_object_order_depends_target_apueLib
+
+build apue/chapter8/CMakeFiles/fork_ch8_1.dir/fork_ch8_1.c.o: C_COMPILER__fork_ch8_1_ /Users/vitah/Downloads/dev/corki/apue/chapter8/fork_ch8_1.c || cmake_object_order_depends_target_fork_ch8_1
+  DEP_FILE = apue/chapter8/CMakeFiles/fork_ch8_1.dir/fork_ch8_1.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/chapter8/CMakeFiles/fork_ch8_1.dir
+  OBJECT_FILE_DIR = apue/chapter8/CMakeFiles/fork_ch8_1.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target fork_ch8_1
+
+
+#############################################
+# Link the executable apue/chapter8/fork_ch8_1
+
+build apue/chapter8/fork_ch8_1: C_EXECUTABLE_LINKER__fork_ch8_1_ apue/chapter8/CMakeFiles/fork_ch8_1.dir/fork_ch8_1.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/chapter8/CMakeFiles/fork_ch8_1.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/fork_ch8_1
+  TARGET_PDB = fork_ch8_1.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target fork_ch8_8
+
+
+#############################################
+# Order-only phony target for fork_ch8_8
+
+build cmake_object_order_depends_target_fork_ch8_8: phony || cmake_object_order_depends_target_apueLib
+
+build apue/chapter8/CMakeFiles/fork_ch8_8.dir/fork_ch8_8.c.o: C_COMPILER__fork_ch8_8_ /Users/vitah/Downloads/dev/corki/apue/chapter8/fork_ch8_8.c || cmake_object_order_depends_target_fork_ch8_8
+  DEP_FILE = apue/chapter8/CMakeFiles/fork_ch8_8.dir/fork_ch8_8.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/chapter8/CMakeFiles/fork_ch8_8.dir
+  OBJECT_FILE_DIR = apue/chapter8/CMakeFiles/fork_ch8_8.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target fork_ch8_8
+
+
+#############################################
+# Link the executable apue/chapter8/fork_ch8_8
+
+build apue/chapter8/fork_ch8_8: C_EXECUTABLE_LINKER__fork_ch8_8_ apue/chapter8/CMakeFiles/fork_ch8_8.dir/fork_ch8_8.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/chapter8/CMakeFiles/fork_ch8_8.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/fork_ch8_8
+  TARGET_PDB = fork_ch8_8.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target solve_race_condition1_ch8_13
+
+
+#############################################
+# Order-only phony target for solve_race_condition1_ch8_13
+
+build cmake_object_order_depends_target_solve_race_condition1_ch8_13: phony || cmake_object_order_depends_target_apueLib
+
+build apue/chapter8/CMakeFiles/solve_race_condition1_ch8_13.dir/solve_race_condition1_ch8_13.c.o: C_COMPILER__solve_race_condition1_ch8_13_ /Users/vitah/Downloads/dev/corki/apue/chapter8/solve_race_condition1_ch8_13.c || cmake_object_order_depends_target_solve_race_condition1_ch8_13
+  DEP_FILE = apue/chapter8/CMakeFiles/solve_race_condition1_ch8_13.dir/solve_race_condition1_ch8_13.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/chapter8/CMakeFiles/solve_race_condition1_ch8_13.dir
+  OBJECT_FILE_DIR = apue/chapter8/CMakeFiles/solve_race_condition1_ch8_13.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target solve_race_condition1_ch8_13
+
+
+#############################################
+# Link the executable apue/chapter8/solve_race_condition1_ch8_13
+
+build apue/chapter8/solve_race_condition1_ch8_13: C_EXECUTABLE_LINKER__solve_race_condition1_ch8_13_ apue/chapter8/CMakeFiles/solve_race_condition1_ch8_13.dir/solve_race_condition1_ch8_13.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/chapter8/CMakeFiles/solve_race_condition1_ch8_13.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/solve_race_condition1_ch8_13
+  TARGET_PDB = solve_race_condition1_ch8_13.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target solve_race_condition2_ch8_13
+
+
+#############################################
+# Order-only phony target for solve_race_condition2_ch8_13
+
+build cmake_object_order_depends_target_solve_race_condition2_ch8_13: phony || cmake_object_order_depends_target_apueLib
+
+build apue/chapter8/CMakeFiles/solve_race_condition2_ch8_13.dir/solve_race_condition2_ch8_13.c.o: C_COMPILER__solve_race_condition2_ch8_13_ /Users/vitah/Downloads/dev/corki/apue/chapter8/solve_race_condition2_ch8_13.c || cmake_object_order_depends_target_solve_race_condition2_ch8_13
+  DEP_FILE = apue/chapter8/CMakeFiles/solve_race_condition2_ch8_13.dir/solve_race_condition2_ch8_13.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/chapter8/CMakeFiles/solve_race_condition2_ch8_13.dir
+  OBJECT_FILE_DIR = apue/chapter8/CMakeFiles/solve_race_condition2_ch8_13.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target solve_race_condition2_ch8_13
+
+
+#############################################
+# Link the executable apue/chapter8/solve_race_condition2_ch8_13
+
+build apue/chapter8/solve_race_condition2_ch8_13: C_EXECUTABLE_LINKER__solve_race_condition2_ch8_13_ apue/chapter8/CMakeFiles/solve_race_condition2_ch8_13.dir/solve_race_condition2_ch8_13.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/chapter8/CMakeFiles/solve_race_condition2_ch8_13.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/solve_race_condition2_ch8_13
+  TARGET_PDB = solve_race_condition2_ch8_13.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target system_ch8_23
+
+
+#############################################
+# Order-only phony target for system_ch8_23
+
+build cmake_object_order_depends_target_system_ch8_23: phony || cmake_object_order_depends_target_apueLib
+
+build apue/chapter8/CMakeFiles/system_ch8_23.dir/system_ch8_23.c.o: C_COMPILER__system_ch8_23_ /Users/vitah/Downloads/dev/corki/apue/chapter8/system_ch8_23.c || cmake_object_order_depends_target_system_ch8_23
+  DEP_FILE = apue/chapter8/CMakeFiles/system_ch8_23.dir/system_ch8_23.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/chapter8/CMakeFiles/system_ch8_23.dir
+  OBJECT_FILE_DIR = apue/chapter8/CMakeFiles/system_ch8_23.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target system_ch8_23
+
+
+#############################################
+# Link the executable apue/chapter8/system_ch8_23
+
+build apue/chapter8/system_ch8_23: C_EXECUTABLE_LINKER__system_ch8_23_ apue/chapter8/CMakeFiles/system_ch8_23.dir/system_ch8_23.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/chapter8/CMakeFiles/system_ch8_23.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/system_ch8_23
+  TARGET_PDB = system_ch8_23.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test
+
+
+#############################################
+# Order-only phony target for test
+
+build cmake_object_order_depends_target_test: phony || cmake_object_order_depends_target_apueLib
+
+build apue/chapter8/CMakeFiles/test.dir/test.c.o: C_COMPILER__test_ /Users/vitah/Downloads/dev/corki/apue/chapter8/test.c || cmake_object_order_depends_target_test
+  DEP_FILE = apue/chapter8/CMakeFiles/test.dir/test.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/chapter8/CMakeFiles/test.dir
+  OBJECT_FILE_DIR = apue/chapter8/CMakeFiles/test.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test
+
+
+#############################################
+# Link the executable apue/chapter8/test
+
+build apue/chapter8/test: C_EXECUTABLE_LINKER__test_ apue/chapter8/CMakeFiles/test.dir/test.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/chapter8/CMakeFiles/test.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/test
+  TARGET_PDB = test.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_race_condition_ch8_12
+
+
+#############################################
+# Order-only phony target for test_race_condition_ch8_12
+
+build cmake_object_order_depends_target_test_race_condition_ch8_12: phony || cmake_object_order_depends_target_apueLib
+
+build apue/chapter8/CMakeFiles/test_race_condition_ch8_12.dir/test_race_condition_ch8_12.c.o: C_COMPILER__test_race_condition_ch8_12_ /Users/vitah/Downloads/dev/corki/apue/chapter8/test_race_condition_ch8_12.c || cmake_object_order_depends_target_test_race_condition_ch8_12
+  DEP_FILE = apue/chapter8/CMakeFiles/test_race_condition_ch8_12.dir/test_race_condition_ch8_12.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/chapter8/CMakeFiles/test_race_condition_ch8_12.dir
+  OBJECT_FILE_DIR = apue/chapter8/CMakeFiles/test_race_condition_ch8_12.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_race_condition_ch8_12
+
+
+#############################################
+# Link the executable apue/chapter8/test_race_condition_ch8_12
+
+build apue/chapter8/test_race_condition_ch8_12: C_EXECUTABLE_LINKER__test_race_condition_ch8_12_ apue/chapter8/CMakeFiles/test_race_condition_ch8_12.dir/test_race_condition_ch8_12.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/chapter8/CMakeFiles/test_race_condition_ch8_12.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/test_race_condition_ch8_12
+  TARGET_PDB = test_race_condition_ch8_12.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target vfork_ch8_3
+
+
+#############################################
+# Order-only phony target for vfork_ch8_3
+
+build cmake_object_order_depends_target_vfork_ch8_3: phony || cmake_object_order_depends_target_apueLib
+
+build apue/chapter8/CMakeFiles/vfork_ch8_3.dir/vfork_ch8_3.c.o: C_COMPILER__vfork_ch8_3_ /Users/vitah/Downloads/dev/corki/apue/chapter8/vfork_ch8_3.c || cmake_object_order_depends_target_vfork_ch8_3
+  DEP_FILE = apue/chapter8/CMakeFiles/vfork_ch8_3.dir/vfork_ch8_3.c.o.d
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu11
+  OBJECT_DIR = apue/chapter8/CMakeFiles/vfork_ch8_3.dir
+  OBJECT_FILE_DIR = apue/chapter8/CMakeFiles/vfork_ch8_3.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target vfork_ch8_3
+
+
+#############################################
+# Link the executable apue/chapter8/vfork_ch8_3
+
+build apue/chapter8/vfork_ch8_3: C_EXECUTABLE_LINKER__vfork_ch8_3_ apue/chapter8/CMakeFiles/vfork_ch8_3.dir/vfork_ch8_3.c.o | apue/lib/lib.out/libapueLib.a || apue/lib/lib.out/libapueLib.a
+  FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+  LINK_LIBRARIES = apue/lib/lib.out/libapueLib.a
+  OBJECT_DIR = apue/chapter8/CMakeFiles/vfork_ch8_3.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = apue/chapter8/vfork_ch8_3
+  TARGET_PDB = vfork_ch8_3.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build apue/chapter8/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/vitah/Downloads/dev/corki/apue/chapter8 && /opt/homebrew/Cellar/cmake/3.25.0/bin/ccmake -S/Users/vitah/Downloads/dev/corki -B/Users/vitah/Downloads/dev/corki
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build apue/chapter8/edit_cache: phony apue/chapter8/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build apue/chapter8/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/vitah/Downloads/dev/corki/apue/chapter8 && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/vitah/Downloads/dev/corki -B/Users/vitah/Downloads/dev/corki
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build apue/chapter8/rebuild_cache: phony apue/chapter8/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/vitah/Downloads/dev/corki/apue/chapter8/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -223,13 +573,33 @@ build apue/lib/lib.out/rebuild_cache: phony apue/lib/lib.out/CMakeFiles/rebuild_
 # =============================================================================
 # Target aliases.
 
+build CMakeCCompilerId: phony apue/chapter8/CMakeCCompilerId
+
 build apueLib: phony apue/lib/lib.out/libapueLib.a
+
+build echo_all_ch8_17: phony apue/chapter8/echo_all_ch8_17
+
+build ex8_6: phony apue/chapter8/ex8_6
+
+build exec_ch8_16: phony apue/chapter8/exec_ch8_16
 
 build fork_ch8_1: phony apue/chapter8/fork_ch8_1
 
+build fork_ch8_8: phony apue/chapter8/fork_ch8_8
+
 build libapueLib.a: phony apue/lib/lib.out/libapueLib.a
 
+build solve_race_condition1_ch8_13: phony apue/chapter8/solve_race_condition1_ch8_13
+
+build solve_race_condition2_ch8_13: phony apue/chapter8/solve_race_condition2_ch8_13
+
+build system_ch8_23: phony apue/chapter8/system_ch8_23
+
 build test: phony apue/chapter8/test
+
+build test_race_condition_ch8_12: phony apue/chapter8/test_race_condition_ch8_12
+
+build vfork_ch8_3: phony apue/chapter8/vfork_ch8_3
 
 # =============================================================================
 # Folder targets.
@@ -246,7 +616,14 @@ build all: phony apue/all
 #############################################
 # Folder: /Users/vitah/Downloads/dev/corki/apue
 
-build apue/all: phony apue/chapter8/test apue/chapter8/fork_ch8_1 apue/lib/lib.out/all
+build apue/all: phony apue/chapter8/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/vitah/Downloads/dev/corki/apue/chapter8
+
+build apue/chapter8/all: phony apue/chapter8/CMakeCCompilerId apue/chapter8/echo_all_ch8_17 apue/chapter8/ex8_6 apue/chapter8/exec_ch8_16 apue/chapter8/fork_ch8_1 apue/chapter8/fork_ch8_8 apue/chapter8/solve_race_condition1_ch8_13 apue/chapter8/solve_race_condition2_ch8_13 apue/chapter8/system_ch8_23 apue/chapter8/test apue/chapter8/test_race_condition_ch8_12 apue/chapter8/vfork_ch8_3 apue/lib/lib.out/all
 
 # =============================================================================
 
@@ -262,14 +639,14 @@ build apue/lib/lib.out/all: phony apue/lib/lib.out/libapueLib.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake CMakeLists.txt apue/CMakeLists.txt apue/lib/CMakeLists.txt
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake CMakeLists.txt apue/CMakeLists.txt apue/chapter8/CMakeLists.txt apue/lib/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake CMakeLists.txt apue/CMakeLists.txt apue/lib/CMakeLists.txt: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake CMakeLists.txt apue/CMakeLists.txt apue/chapter8/CMakeLists.txt apue/lib/CMakeLists.txt: phony
 
 
 #############################################
