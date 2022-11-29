@@ -30,11 +30,11 @@ void ErrorQuit(const char *fmt, ...) {
     exit(1);
 }
 
-static void ErrorDoIt(int errnoflag, int error, const char *fmt, va_list ap) {
+static void ErrorDoIt(int errno_flag, int error, const char *fmt, va_list ap) {
     char buf[MAXLINE];
 
     vsnprintf(buf, MAXLINE - 1, fmt, ap);
-    if (errnoflag) {
+    if (errno_flag) {
         snprintf(buf + strlen(buf), MAXLINE - strlen(buf) - 1, ": %s",
                  strerror(error));
     }
