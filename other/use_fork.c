@@ -2,7 +2,6 @@
  * fork()函数的使用
  * 子进程对变量对修改并不影响父进程中该变量的值
  */
-
 #include <stdio.h>
 #include <unistd.h>
 
