@@ -12,12 +12,11 @@
 #include "../lib/apue.h"
 
 static void output(char *str) {
-    char *ptr;
-    int c;
-
     // 取消输出缓存
     setbuf(stdout, NULL);
 
+    char *ptr;
+    int c;
     for (ptr = str; (c = *ptr++) != 0;) {
         putc(c, stdout);
     }
