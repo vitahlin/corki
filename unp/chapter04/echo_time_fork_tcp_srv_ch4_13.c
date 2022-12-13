@@ -2,19 +2,18 @@
  * 返回时间的服务器程序
  * 采用fork函数并发处理
  */
-
 #include <time.h>
 #include "../lib/unp.h"
 
 int main(int argc, char **argv) {
-    int listen_fd, conn_fd;
+    int conn_fd;
     struct sockaddr_in serv_addr, cli_addr;
     socklen_t len;
     char buff[MAX_SIZE];
     time_t ticks;
     pid_t pid;
 
-    listen_fd = wrapSocket(AF_INET, SOCK_STREAM, 0);
+    int listen_fd = wrapSocket(AF_INET, SOCK_STREAM, 0);
 
     bzero(&serv_addr, sizeof(serv_addr));
 
@@ -52,4 +51,6 @@ int main(int argc, char **argv) {
         }
         wrapClose(conn_fd);
     }
+
+    return 0;
 }
