@@ -7,7 +7,7 @@ void strCli(FILE *fp, int sock_fd) {
     char send_line[MAX_SIZE], receive_line[MAX_SIZE];
     while (wrapFgets(send_line, MAX_SIZE, fp) != NULL) {
         wrapWriten(sock_fd, send_line, strlen(send_line));
-        
+
         if (wrapReadlineV2(sock_fd, receive_line, MAX_SIZE) == 0) {
             printf("strCli: server terminated prematurely");
             exit(-1);
@@ -18,17 +18,15 @@ void strCli(FILE *fp, int sock_fd) {
 }
 
 int main(int argc, char **argv) {
-    int sock_fd;
-    struct sockaddr_in serv_address;
 
     char serv_ip[16] = "127.0.0.1";
     int port = 9876;
 
     // 创建一个套接字
-    sock_fd = wrapSocket(AF_INET, SOCK_STREAM, 0);
+    int sock_fd = wrapSocket(AF_INET, SOCK_STREAM, 0);
 
+    struct sockaddr_in serv_address;
     bzero(&serv_address, sizeof(serv_address));
-
     serv_address.sin_family = AF_INET;
     serv_address.sin_port = htons(port);
 
