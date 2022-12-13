@@ -28,11 +28,13 @@ int main(int argc, char **argv) {
 
     // 进行IP地址转换
     wrapInetPton(AF_INET, serv_ip, &serv_address.sin_addr);
-    
+
     wrapConnect(sock_fd, (const struct sockaddr *) &serv_address, sizeof(serv_address));
 
     ssize_t n;
     char receive_line[MAX_SIZE + 1];
+
+    // 这里循环是因为在TCP中，不一定一次就能拿到全部返回内容
     while ((n = read(sock_fd, receive_line, MAX_SIZE)) > 0) {
         receive_line[n] = 0;
         if (fputs(receive_line, stdout) == EOF) {
