@@ -16,11 +16,11 @@ int main(int argc, char **argv) {
             printf("big-endian\n");
         } else if (un.c[0] == 2 && un.c[1] == 1) {
             printf("little-endian\n");
-        }else{
+        } else {
             printf("unknown\n");
         }
     } else {
-        printf("sizeof(short)=%d\n", sizeof(short ));
+        printf("sizeof(short)=%d\n", sizeof(short));
     }
 
     return 0;
