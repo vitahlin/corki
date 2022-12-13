@@ -7,6 +7,7 @@ void strCli(FILE *fp, int sock_fd) {
     char send_line[MAX_SIZE], receive_line[MAX_SIZE];
     while (wrapFgets(send_line, MAX_SIZE, fp) != NULL) {
         wrapWriten(sock_fd, send_line, strlen(send_line));
+        
         if (wrapReadlineV2(sock_fd, receive_line, MAX_SIZE) == 0) {
             printf("strCli: server terminated prematurely");
             exit(-1);

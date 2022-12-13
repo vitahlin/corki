@@ -22,12 +22,12 @@ void strEcho(int sock_fd) {
 
 
 int main(int argc, char **argv) {
-    int listen_fd, conn_fd;
+    int conn_fd;
     struct sockaddr_in serv_address, cli_address;
     socklen_t len;
     pid_t child_pid;
 
-    listen_fd = wrapSocket(AF_INET, SOCK_STREAM, 0);
+    int listen_fd = wrapSocket(AF_INET, SOCK_STREAM, 0);
 
     bzero(&serv_address, sizeof(serv_address));
 
