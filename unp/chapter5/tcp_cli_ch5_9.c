@@ -21,7 +21,9 @@ int main(int argc, char **argv) {
     char serv_ip[16] = "127.0.0.1";
     int port = 9876;
 
-    // 建立5个连接
+    /**
+     * 建立5个连接，模拟多个客户端进程同时终止的情况
+     */
     for (i = 0; i < 5; i++) {
         sock_fd[i] = wrapSocket(AF_INET, SOCK_STREAM, 0);
         bzero(&serv_address, sizeof(serv_address));

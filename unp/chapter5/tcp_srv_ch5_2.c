@@ -44,7 +44,10 @@ int main(int argc, char **argv) {
         len = sizeof(cli_address);
         conn_fd = wrapAccept(listen_fd, (struct sockaddr *) &cli_address, &len);
 
-        // 采用fork函数并发处理
+        /**
+         * 采用fork函数并发处理
+         * 客户端进程关闭时，无法处理服务器进程僵死的情况，因为没有默认的SIGCHLD是被忽略的
+         */
         if ((child_pid = fork()) < 0) {
             perror("fork error");
             exit(-1);

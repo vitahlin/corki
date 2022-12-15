@@ -1,19 +1,17 @@
 /**
- * 回射程序服务端
- * fork子进程处理客户端连接，并用wait函数处理信号SIGCHLD
+ * 回射程序的服务端
+ * 采用fork函数并发处理，用waitpid处理子进程的SIGCHLD信号
  */
 #include "../lib/unp.h"
 
-/**
- * 用wait函数处理信号SIGCHLD
- * @param sig_no
- */
-void waitChildProcess(int sig_no) {
+void waitpidChildProcess(int sig_no) {
     pid_t pid;
     int stat;
 
-    pid = wait(&stat);
-    printf("child %ld terminated\n", (long) pid);
+    // 指定 WNOHANG 选项，告知当有尚未终止当子进程在运行时不要阻塞
+    while ((pid = waitpid(-1, &stat, WNOHANG)) > 0) {
+        printf("child %ld terminated\n", (long) pid);
+    }
 }
 
 void strEcho(int sock_fd) {
@@ -52,8 +50,10 @@ int main(int argc, char **argv) {
     // 将套接字转换成一个监听套接字，这样来自客户端的外来连接就可以在该套接字上由内核接受
     wrapListen(listen_fd, LISTENQ);
 
-    // 处理信号 SIGCHLD
-    wrapSignal(SIGCHLD, waitChildProcess);
+    /**
+     * 通过waitpid函数处理信号SIGCHLD
+     */
+    wrapSignal(SIGCHLD, waitpidChildProcess);
 
     for (;;) {
         len = sizeof(cli_address);
