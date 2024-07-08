@@ -7,7 +7,7 @@ void initServerConfig() {
 }
 
 int main(int argc, char **argv) {
-    printf("Hello toy_rds server");
+    printf("Hello this is my toy redis");
 
     initServerConfig();
 
