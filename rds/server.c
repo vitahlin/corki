@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "server.h"
 
 /**
@@ -12,4 +13,22 @@ int main(int argc, char **argv) {
     initServerConfig();
 
     return 0;
+}
+
+aeEventLoop *createEventLoop(int capacity) {
+    aeEventLoop *eventLoop;
+
+    eventLoop = malloc(sizeof(*eventLoop));
+    if (eventLoop == NULL) {
+        return NULL;
+    }
+
+    eventLoop->eventCapacity = capacity;
+
+    eventLoop->events = malloc(sizeof(aeFileEvent) * capacity);
+    if (eventLoop->events == NULL) {
+        return NULL;
+    }
+
+    return eventLoop;
 }
