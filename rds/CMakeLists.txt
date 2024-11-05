@@ -3,4 +3,7 @@ project(rds)
 set(CMAKE_C_STANDARD 11)
 
 #添加子目录
-add_executable(rds_srv server.c server.h)
+add_executable(rds_srv
+    ae.h ae.c
+    server.h server.c
+)
