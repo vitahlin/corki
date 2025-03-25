@@ -1,6 +1,7 @@
 #include "ae.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "ae_queue.c"
 
 aeEventLoop *createEventLoop(int maxSize) {
     aeEventLoop *eventLoop;
@@ -13,6 +14,8 @@ aeEventLoop *createEventLoop(int maxSize) {
 
     printf("create eventLoop success\n");
     // 根据不同的系统创建不同的多路复用函数，目前mac直接实现kqueue
+    aeApiCreate(eventLoop);
+
 
     return eventLoop;
 }

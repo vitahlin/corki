@@ -32,6 +32,7 @@ typedef struct aeEventLoop {
     // 已经就绪的事件
     aeFiredEvent *firedEvent;
     int eventCapacity;
+    //
     void *apiData;
     aeBeforeSleepProcessHandler *beforeSleepProc;
     aeBeforeSleepProcessHandler *afterSleepProc;
