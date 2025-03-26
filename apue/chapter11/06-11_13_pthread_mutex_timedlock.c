@@ -1,6 +1,5 @@
 /**
- * pthread_mutex_timedlock用法
- * Todo：macOS不支持该方法
+ * pthread_mutex_timedlock 用法
  */
 
 #include "../lib/apue.h"
@@ -24,6 +23,7 @@ int main(int argc, const char** argv) {
 
     tout.tv_sec += 10;
 
+#ifndef __APPLE__
     err = pthread_mutex_timedlock(&mutex, &tout);
     clock_gettime(CLOCK_REALTIME, &tout);
     tmp = localtime(&tout.tv_sec);
@@ -34,6 +34,9 @@ int main(int argc, const char** argv) {
     } else {
         printf("Can not lock mutex again: %s\n", strerror(err));
     }
+#else
+    printf("pthread_mutex_timedlock is not supported on macOS\n");
+#endif
 
     return 0;
 }

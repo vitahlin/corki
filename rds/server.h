@@ -12,6 +12,9 @@ struct rdsServer {
     pid_t pid;
     int32_t clientNum;
     rdsClient *clients;
+
+    // 定义结构保存服务端socket数据
+    
     int maxClientCount;
     aeEventLoop *eventLoop;
 };

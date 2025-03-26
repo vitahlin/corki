@@ -6,7 +6,6 @@
  * 当SigcldHandler函数执行完后，父进程又继续做自己的事情。
  */
 
-#include "../../apue_old/src/lib/apue.h"
 #include "../lib/apue.h"
 
 static void SigcldHandler(int);
