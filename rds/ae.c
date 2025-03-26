@@ -1,4 +1,3 @@
-#include "ae.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include "ae_queue.c"
@@ -14,8 +13,15 @@ aeEventLoop *createEventLoop(int maxSize) {
 
     printf("create eventLoop success\n");
     // 根据不同的系统创建不同的多路复用函数，目前mac直接实现kqueue
-    aeApiCreate(eventLoop);
+    if (aeApiCreate(eventLoop) == -1) {
+        log_message(LOG_ERROR, "aeApiCreate失败");
+        return NULL;
+    }
 
+    // 初始化开始的各个事件类型为空
+    for (int i = 0; i < eventLoop->eventCapacity; i++) {
+        eventLoop->events[i].aeType = AE_TYPE_NONE;
+    }
 
     return eventLoop;
 }

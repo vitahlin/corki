@@ -1,6 +1,8 @@
 
-#define AE_READ 1
-#define AE_WRITE 2
+
+#define AE_TYPE_NONE 0
+#define AE_TYPE_READ 1
+#define AE_TYPE_WRITE 2
 
 struct aeEventLoop;
 
