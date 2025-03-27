@@ -11,6 +11,11 @@ struct rdsServer server;
 void initServerConfig() {
 }
 
+int listenToPort(int serverPort, socketFds *fds) {
+    
+    return 0;
+}
+
 int main(int argc, char **argv) {
     printf("Hello this is my toy redis.\n");
 
@@ -22,5 +27,10 @@ int main(int argc, char **argv) {
         exit(1);
     }
 
+    if (listenToPort(6379, &server.tcpFds) == -1) {
+        exit(1);
+    }
+
     return 0;
 }
+

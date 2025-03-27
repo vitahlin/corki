@@ -7,6 +7,12 @@
 typedef struct rdsClient {
 } rdsClient;
 
+// 用来保存服务端socket数据
+typedef struct socketFds {
+    int fd[8];
+    int count;
+} socketFds;
+
 struct rdsServer {
     // pid_t 用于定义进程ID
     pid_t pid;
@@ -14,6 +20,7 @@ struct rdsServer {
     rdsClient *clients;
 
     // 定义结构保存服务端socket数据
+    socketFds tcpFds;
     
     int maxClientCount;
     aeEventLoop *eventLoop;
