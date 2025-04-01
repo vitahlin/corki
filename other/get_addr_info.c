@@ -20,7 +20,45 @@
 #include <netdb.h>
 #include <sys/socket.h>
 
-void getCanUsedIpAddressInLocalhost() {
+
+void getCanBindAddressInTcpServer() {
+    struct addrinfo hints, *res;
+    int sockfd;
+
+    // 1. 清空 hints 并设置参数
+    memset(&hints, 0, sizeof hints);
+    hints.ai_family = AF_UNSPEC;    // 支持 IPv4 或 IPv6
+    hints.ai_socktype = SOCK_STREAM; // 选择 TCP 连接
+    hints.ai_flags = AI_PASSIVE;     // 监听所有可用 IP (0.0.0.0)
+
+    // 2. 获取可用的地址
+    int status = getaddrinfo(NULL, "8080", &hints, &res);
+    if (status != 0) {
+        fprintf(stderr, "getaddrinfo error: %s\n", gai_strerror(status));
+        return;
+    }
+
+    // 3. 创建 socket
+    sockfd = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
+    if (sockfd == -1) {
+        perror("socket error");
+        return;
+    }
+
+    // 4. 绑定端口
+    if (bind(sockfd, res->ai_addr, res->ai_addrlen) == -1) {
+        perror("bind error");
+        close(sockfd);
+        return;
+    }
+
+    printf("Server is running on port 8080...\n");
+
+    // 5. 释放资源
+    freeaddrinfo(res);
+}
+
+void getIpAtLocalhost() {
     struct addrinfo *ailist, *aip;
     struct addrinfo hint;
     struct sockaddr_in *sinp;
@@ -95,7 +133,11 @@ int main() {
     printf("\ngetIpByHostname:\n");
     getIpByHostname();
 
-    printf("\ngetCanUsedIpAddressInLocalhost:\n");
-    getCanUsedIpAddressInLocalhost();
+    printf("\ngetIpAtLocalhost:\n");
+    getIpAtLocalhost();
+
+    printf("\ngetCanBindAddressInTcpServer:\n");
+    getCanBindAddressInTcpServer();
+
     return 0;
 }
