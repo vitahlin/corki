@@ -48,7 +48,7 @@ void getCanUsedIpAddressInLocalhost() {
     for (aip = ailist; aip != NULL; aip = aip->ai_next) {
         sinp = (struct sockaddr_in *) aip->ai_addr;
         addr = inet_ntop(AF_INET, &sinp->sin_addr, buf, INET_ADDRSTRLEN);
-        printf(" addr = %s, port = %d\n", addr ? addr : "unknow ", ntohs(sinp->sin_port));
+        printf(" addr = %s, port = %d\n", addr ? addr : "unknown ", ntohs(sinp->sin_port));
     }
 }
 
