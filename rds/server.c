@@ -2,6 +2,7 @@
 
 #include "server.h"
 #include "log.h"
+#include "anet.h"
 
 struct rdsServer server;
 
@@ -12,8 +13,9 @@ void initServerConfig() {
 }
 
 int listenToPort(int serverPort, socketFds *fds) {
-    
-    return 0;
+    anetTcpServer(server.net_err, serverPort, NULL, server.tcp_backlog);
+
+    return RDS_OK;
 }
 
 int main(int argc, char **argv) {
