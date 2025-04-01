@@ -4,8 +4,10 @@ set(CMAKE_C_STANDARD 11)
 
 #添加子目录
 add_executable(rds_srv
-    ae.h ae.c ae_queue.c
+    ae.h ae.c
+    ae_queue.c
     log.h log.c
+    anet.h anet.c
     zmalloc.h zmalloc.c
     server.h server.c
 )
