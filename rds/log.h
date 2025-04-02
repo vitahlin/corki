@@ -1,3 +1,7 @@
+#include <stdarg.h>
+#include <stdio.h>
+#include <time.h>
+
 
 #define LOG_INFO    1
 #define LOG_WARNING 2
@@ -5,3 +9,5 @@
 
 
 void log_message(int level, const char *message);
+
+void logger(int level, const char *message, ...);

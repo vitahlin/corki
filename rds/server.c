@@ -13,7 +13,7 @@ void initServerConfig() {
 }
 
 int listenToPort(int serverPort, socketFds *fds) {
-//    anetTcpServer(server.net_err, serverPort, NULL, server.tcp_backlog);
+    anetTcpServer(server.net_err, serverPort, NULL, server.tcp_backlog);
 
     return RDS_OK;
 }
