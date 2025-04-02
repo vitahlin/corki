@@ -14,7 +14,11 @@ void initServerConfig() {
 }
 
 int listenToPort(int serverPort, socketFds *fds) {
-    return anetTcpServer(server.net_err, serverPort, NULL, server.tcp_backlog);
+    int socket_fd = -1;
+    socket_fd = anetTcpServer(server.net_err, serverPort, NULL, server.tcp_backlog);
+    if (socket_fd < 0) {
+
+    }
 }
 
 int main(int argc, char **argv) {

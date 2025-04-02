@@ -22,6 +22,32 @@ int anetListen(int s, struct sockaddr *sa, socklen_t len, int backlog) {
     return RDS_OK;
 }
 
+int anetSetBlock(char *err, int fd, int non_block) {
+    int flags;
+
+    if ((flags = fcntl(fd, F_GETFL)) == -1) {
+        loggerError(err, "fcntl(F_GETFL): %s", strerror(errno));
+        return RDS_ERROR;
+    }
+
+    if (!!(flags & O_NONBLOCK) == !!non_block)
+        return RDS_OK;
+
+    if (non_block)
+        // 设置非阻塞模式
+        flags |= O_NONBLOCK;
+    else
+        // 设置阻塞模式
+        flags &= ~O_NONBLOCK;
+
+    // fcntl(fd, F_SETFL, flags) 用于更新文件描述符 fd 的状态。
+    if (fcntl(fd, F_SETFL, flags) == -1) {
+        loggerError(err, "fcntl(F_SETFL,O_NONBLOCK): %s", strerror(errno));
+        return RDS_ERROR;
+    }
+    return RDS_OK;
+}
+
 
 int anetTcpServer(char *server_net_error, int port, char *bindaddr, int backlog) {
     struct addrinfo hint, *p, *serv_addr_info;
