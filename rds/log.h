@@ -8,6 +8,5 @@
 #define LOG_ERROR   3
 
 
-void log_message(int level, const char *message);
-
+void loggerError(const char *message, ...);
 void logger(int level, const char *message, ...);

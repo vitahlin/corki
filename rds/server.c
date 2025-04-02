@@ -6,6 +6,7 @@
 
 struct rdsServer server;
 
+
 /**
  * 初始化服务器配置
  */
@@ -13,9 +14,7 @@ void initServerConfig() {
 }
 
 int listenToPort(int serverPort, socketFds *fds) {
-    anetTcpServer(server.net_err, serverPort, NULL, server.tcp_backlog);
-
-    return RDS_OK;
+    return anetTcpServer(server.net_err, serverPort, NULL, server.tcp_backlog);
 }
 
 int main(int argc, char **argv) {
@@ -29,7 +28,8 @@ int main(int argc, char **argv) {
         exit(1);
     }
 
-    if (listenToPort(6379, &server.tcpFds) == -1) {
+    if (listenToPort(6379, &server.tcpFds) == RDS_ERROR) {
+        loggerError("listenToPort failed");
         exit(1);
     }
 

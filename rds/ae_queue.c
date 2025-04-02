@@ -17,19 +17,19 @@ typedef struct aeApiData{
 static int aeApiCreate(aeEventLoop *eventLoop){
     aeApiData *state = zmalloc(sizeof(aeApiData));
     if (NULL == state) {
-        log_message(LOG_ERROR, "aeApiData分配内存失败");
+        loggerError("aeApiData分配内存失败");
         return -1;
     }
 
     state->event = zmalloc(sizeof(struct kevent) * eventLoop->eventCapacity);
     if (NULL == state->event) {
-        log_message(LOG_ERROR, "aeApiData event分配内存失败");
+        loggerError("aeApiData event分配内存失败");
         return -1;
     }
 
     state->kqfd = kqueue();
     if (state->kqfd == -1) {
-        log_message(LOG_ERROR, "aeApiData kqfd失败");
+        loggerError("aeApiData kqfd失败");
         return -1;
     }
 

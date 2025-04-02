@@ -14,7 +14,7 @@ aeEventLoop *createEventLoop(int maxSize) {
     printf("create eventLoop success\n");
     // 根据不同的系统创建不同的多路复用函数，目前mac直接实现kqueue
     if (aeApiCreate(eventLoop) == -1) {
-        log_message(LOG_ERROR, "aeApiCreate失败");
+        loggerError("aeApiCreate失败");
         return NULL;
     }
 

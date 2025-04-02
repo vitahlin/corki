@@ -12,6 +12,19 @@ const char *current_time() {
     return buffer;
 }
 
+void loggerError(const char *message, ...) {
+    va_list args;  // 用于处理变长参数
+    va_start(args, message);  // 初始化 args，message 是最后一个已知参数
+
+    // 打印日志级别
+    fprintf(stderr, "[error]: ");
+
+    // 打印格式化消息
+    vfprintf(stderr, message, args);
+    fprintf(stderr, "\n");
+
+    va_end(args);  // 结束变长参数的处理
+}
 
 void logger(int level, const char *message, ...) {
     va_list args;  // 用于处理变长参数
@@ -42,30 +55,4 @@ void logger(int level, const char *message, ...) {
     }
 
     va_end(args);  // 结束变长参数的处理
-}
-
-
-// 日志函数
-void log_message(int level, const char *message) {
-    if (level < log_level) {
-        return;  // 如果日志级别低于设定的级别，就不输出
-    }
-
-    const char *level_str;
-    switch (level) {
-        case LOG_INFO:
-            level_str = "INFO";
-            break;
-        case LOG_WARNING:
-            level_str = "WARNING";
-            break;
-        case LOG_ERROR:
-            level_str = "ERROR";
-            break;
-        default:
-            level_str = "UNKNOWN";
-            break;
-    }
-
-    printf("[%s] [%s] %s\n", current_time(), level_str, message);
 }
