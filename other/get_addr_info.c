@@ -2,22 +2,11 @@
 #include <netdb.h>
 #include <string.h>
 #include <arpa/inet.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <string.h>
-#include <fcntl.h>
-#include <time.h>
 #include <ctype.h>
 #include <unistd.h>
 #include <errno.h>
 #include <sys/wait.h>
-#include <signal.h>
-#include <sys/types.h>
 #include <netinet/in.h>
-#include <arpa/inet.h>
-#include <sys/stat.h>
-#include <netdb.h>
 #include <sys/socket.h>
 
 
