@@ -5,6 +5,7 @@
 #define RDS_OK 1
 #define RDS_ERROR 0
 
+
 // 客户端数据和服务端数据
 typedef struct rdsClient {
 } rdsClient;
@@ -14,6 +15,8 @@ typedef struct socketFds {
     int fd[8];
     int count;
 } socketFds;
+
+int listenToPort(int serverPort, socketFds *fds);
 
 struct rdsServer {
     // pid_t 用于定义进程ID
